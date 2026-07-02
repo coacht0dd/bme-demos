@@ -1,0 +1,406 @@
+triumphant-rv/index.html<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triumphant RV Solutions — Mobile RV Repair, Gainesville &amp; North Georgia</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Expanded:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0D0D0D; --char:#161616; --char2:#1F1F1F;
+    --red:#D81818; --red-d:#B01010;
+    --silver:#F2F2F0; --silver-d:#E4E4E1; --white:#FFFFFF;
+    --ink:#161616; --muted:#5E5E5C; --line:#DCDCD8; --dline:rgba(255,255,255,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Archivo',sans-serif;background:var(--white);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-family:'Archivo Expanded','Archivo',sans-serif}
+  .ph{background:repeating-linear-gradient(45deg,#242424,#242424 16px,#1C1C1C 16px,#1C1C1C 32px);display:flex;align-items:center;justify-content:center;color:#8A8A87;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-align:center;padding:14px}
+  .ph.lt{background:repeating-linear-gradient(45deg,#E8E8E5,#E8E8E5 16px,#DFDFDC 16px,#DFDFDC 32px);color:#8A8A87}
+  .btn{display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;padding:15px 26px;text-decoration:none;transition:all .15s}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-d)}
+  .btn-blk{background:var(--black);color:#fff}
+  .btn-blk:hover{background:#000}
+  .btn-line{border:2px solid #fff;color:#fff}
+  .btn-line:hover{background:#fff;color:var(--black)}
+  .btn-line-d{border:2px solid var(--black);color:var(--black)}
+  .btn-line-d:hover{background:var(--black);color:#fff}
+  /* Topbar + header */
+  .topbar{background:var(--red);color:#fff;font-weight:600;font-size:13.5px;text-align:center;padding:8px 12px;letter-spacing:.02em}
+  .topbar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);z-index:50;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+  .logo .mark{width:46px;height:46px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded';font-weight:800;font-size:22px}
+  .logo b{font-family:'Archivo Expanded';font-size:19px;text-transform:uppercase;line-height:1.05;display:block;letter-spacing:-.01em}
+  .logo small{color:var(--muted);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  nav ul{display:flex;gap:30px;list-style:none;font-weight:600;font-size:14.5px}
+  nav a{color:var(--ink);text-decoration:none}
+  nav a:hover{color:var(--red)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .nav-phone{font-family:'Archivo Expanded';font-weight:700;font-size:16px;color:var(--black);text-decoration:none}
+  .nav-phone:hover{color:var(--red)}
+  /* Hero */
+  .hero{background:var(--black);color:#fff;position:relative;overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0;opacity:.55}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,13,13,.94) 0%,rgba(13,13,13,.72) 46%,rgba(13,13,13,.3) 100%)}
+  .hero .inner{position:relative;z-index:2;padding:110px 0 120px;max-width:640px}
+  .kick{font-weight:700;color:#fff;letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+  .kick::before{content:"";width:34px;height:3px;background:var(--red)}
+  .hero h1{font-size:64px;font-weight:800;line-height:1.0;letter-spacing:-.015em;text-transform:uppercase}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero p{margin:22px 0 34px;font-size:18.5px;color:#CFCFCC;max-width:520px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-strip{position:relative;z-index:2;border-top:1px solid var(--dline);background:rgba(13,13,13,.6);backdrop-filter:blur(4px)}
+  .hero-strip .wrap{display:flex;justify-content:space-between;gap:20px;padding:18px 32px;flex-wrap:wrap}
+  .hero-strip .t{display:flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+  .hero-strip .t i{width:9px;height:9px;background:var(--red);font-style:normal;flex:0 0 auto}
+  /* Ticker */
+  .ticker{background:var(--white);border-bottom:1px solid var(--line);overflow:hidden}
+  .ticker-track{display:flex;white-space:nowrap;padding:14px 0;animation:tick 40s linear infinite;font-family:'Archivo Expanded';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--ink)}
+  .ticker-track span i{font-style:normal;margin-right:64px}
+  .ticker-track span i::after{content:"·";color:var(--red);margin-left:64px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+  section{padding:96px 0}
+  .sec-head{max-width:680px;margin-bottom:52px}
+  .eyebrow{font-weight:700;color:var(--red);letter-spacing:.2em;text-transform:uppercase;font-size:12px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:30px;height:3px;background:var(--red)}
+  .sec-head h2{font-size:40px;font-weight:800;line-height:1.04;letter-spacing:-.01em;text-transform:uppercase;color:var(--black)}
+  .sec-head p{color:var(--muted);font-size:16.5px;margin-top:14px}
+  /* Services */
+  .svc-sec{background:var(--silver)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{background:var(--white);padding:32px 28px;border-top:4px solid var(--black);transition:border-color .15s, transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+  .svc:hover{border-top-color:var(--red);transform:translateY(-3px)}
+  .svc h3{font-size:18px;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.01em}
+  .svc p{color:var(--muted);font-size:14.5px}
+  .svc a{color:var(--red);text-decoration:none;font-weight:700;font-size:12.5px;display:inline-block;margin-top:16px;text-transform:uppercase;letter-spacing:.1em}
+  .svc a:hover{text-decoration:underline;text-underline-offset:4px}
+  /* Story */
+  .story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+  .story .imgcol{position:relative}
+  .story .imgcol .ph{height:500px}
+  .story .imgcol .flag{position:absolute;left:-1px;bottom:32px;background:var(--red);color:#fff;padding:16px 22px;max-width:260px}
+  .story .imgcol .flag b{font-family:'Archivo Expanded';text-transform:uppercase;font-size:15px;display:block;line-height:1.2}
+  .story .imgcol .flag small{font-size:12.5px;opacity:.85}
+  .story h2{font-size:38px;font-weight:800;line-height:1.05;text-transform:uppercase;color:var(--black);letter-spacing:-.01em}
+  .story p{margin:16px 0;font-size:16px;color:#3B3B39;max-width:520px}
+  .story .creds{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border:1px solid var(--line)}
+  .story .cred{padding:16px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .story .cred:nth-child(2n){border-right:0}
+  .story .cred:nth-child(3),.story .cred:nth-child(4){border-bottom:0}
+  .story .cred b{font-family:'Archivo Expanded';text-transform:uppercase;font-size:13.5px;color:var(--black);display:block;line-height:1.2}
+  .story .cred small{color:var(--muted);font-size:12.5px}
+  /* Area */
+  .area{background:var(--black);color:#fff}
+  .area .sec-head h2{color:#fff}
+  .area .sec-head p{color:#B9B9B6}
+  .area .wrap-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+  .area ul{list-style:none;columns:2;column-gap:24px;margin-top:4px}
+  .area li{break-inside:avoid;border-bottom:1px solid var(--dline)}
+  .area li a{color:#DADAD7;text-decoration:none;font-weight:600;font-size:15px;display:flex;justify-content:space-between;padding:13px 2px}
+  .area li a:hover{color:#fff}
+  .area li a::after{content:"→";color:var(--red)}
+  .area .note{margin-top:22px;color:#8A8A87;font-size:14px}
+  .area .map{height:440px}
+  /* Reviews */
+  .rev{background:var(--silver)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rcard{background:var(--white);padding:30px 28px;box-shadow:0 1px 2px rgba(0,0,0,.05);position:relative}
+  .rcard::before{content:"";position:absolute;top:0;left:0;width:44px;height:4px;background:var(--red)}
+  .stars{color:var(--red);letter-spacing:3px;font-size:14px;margin-bottom:14px}
+  .rcard p{color:#3B3B39;font-size:15px}
+  .rcard b{display:block;margin-top:18px;font-family:'Archivo Expanded';text-transform:uppercase;font-size:13.5px;letter-spacing:.04em}
+  .rcard small{color:var(--muted);font-size:12.5px}
+  .rev-foot{text-align:center;margin-top:38px}
+  /* Plans */
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .plan{border:1px solid var(--line);background:var(--white);padding:32px 28px;display:flex;flex-direction:column}
+  .plan.fea{border:2px solid var(--black);position:relative}
+  .plan.fea::before{content:"Most Popular";position:absolute;top:-13px;left:28px;background:var(--red);color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:11px;padding:5px 12px}
+  .plan h3{font-size:17px;text-transform:uppercase;font-weight:800}
+  .plan .price{font-family:'Archivo Expanded';font-weight:800;font-size:42px;color:var(--black);margin:12px 0 2px}
+  .plan .per{color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:18px;font-weight:600}
+  .plan ul{list-style:none;flex:1}
+  .plan li{padding:8px 0 8px 20px;position:relative;color:#3B3B39;font-size:14px;border-bottom:1px solid var(--line)}
+  .plan li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;background:var(--red)}
+  .plan .btn{margin-top:24px;text-align:center}
+  /* Classes band */
+  .classes{background:var(--char);color:#fff;position:relative;overflow:hidden}
+  .classes .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .classes h2{font-size:36px;font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.01em}
+  .classes h2 em{font-style:normal;color:var(--red)}
+  .classes p{color:#B9B9B6;margin:16px 0 28px;font-size:16px;max-width:500px}
+  .classes .ph{height:380px}
+  .classes ul{list-style:none;margin:0 0 30px}
+  .classes li{padding:9px 0 9px 22px;position:relative;color:#DADAD7;font-size:15px;border-bottom:1px solid var(--dline)}
+  .classes li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:8px;background:var(--red)}
+  /* FAQ */
+  .faq-list{max-width:840px}
+  details{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:22px 4px;font-family:'Archivo Expanded';font-weight:700;font-size:16.5px;text-transform:uppercase;letter-spacing:.01em}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--red);font-size:26px;font-weight:700;font-family:'Archivo'}
+  details[open] summary::after{content:"−"}
+  details p{padding:0 4px 22px;color:var(--muted);max-width:680px;font-size:15px}
+  /* Blog */
+  .blog{background:var(--silver)}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .bcard{background:var(--white);box-shadow:0 1px 2px rgba(0,0,0,.05);text-decoration:none;color:var(--ink);display:block}
+  .bcard .ph.lt{height:180px}
+  .bcard .bd{padding:22px 24px 26px}
+  .bcard small{color:var(--red);text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:11px}
+  .bcard h3{font-size:17.5px;margin:10px 0 8px;line-height:1.2;font-weight:700}
+  .bcard p{color:var(--muted);font-size:13.5px}
+  /* CTA */
+  .cta-band{background:var(--red);color:#fff;padding:76px 0}
+  .cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .cta-band h2{font-size:42px;line-height:1.03;text-transform:uppercase;font-weight:800;letter-spacing:-.01em}
+  .cta-band p{font-weight:500;margin-top:8px;font-size:16px;opacity:.92}
+  .cta-band .btns{display:flex;gap:12px;flex-wrap:wrap}
+  footer{background:var(--black);color:#8A8A87;padding:60px 0 30px}
+  .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .f-grid h4{font-family:'Archivo Expanded';text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:#fff;margin-bottom:16px}
+  .f-grid a,.f-grid p{color:#8A8A87;text-decoration:none;font-size:14px;display:block;padding:4px 0}
+  .f-grid a:hover{color:#fff}
+  .f-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .f-logo .mark{width:42px;height:42px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded';font-weight:800;font-size:20px}
+  .f-logo b{font-family:'Archivo Expanded';font-size:17px;text-transform:uppercase;color:#fff;display:block;line-height:1.05}
+  .f-logo small{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  .f-bottom{border-top:1px solid var(--dline);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap;gap:10px}
+  @media(max-width:920px){
+    .hero h1{font-size:44px}
+    .hero .inner{padding:80px 0 90px}
+    .story .wrap,.area .wrap-grid,.classes .wrap{grid-template-columns:1fr}
+    .svc-grid,.rev-grid,.plans-grid,.blog-grid{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr 1fr}
+    nav ul{display:none}
+    .nav-phone{display:none}
+    .story .imgcol .ph{height:340px}
+    .sec-head h2{font-size:30px}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">RV down? Call or text <a href="tel:7705192828">770-519-2828</a> — serving Gainesville, Lake Lanier &amp; all of North Georgia</div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <div class="mark">T</div>
+      <div><b>Triumphant RV<br>Solutions</b><small>Mobile Service &amp; Repair</small></div>
+    </a>
+    <nav><ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#classes">RV Classes</a></li>
+      <li><a href="#blog">RV Tips</a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <a href="tel:7705192828" class="nav-phone">770-519-2828</a>
+      <a href="#book" class="btn btn-red">Request Service</a>
+    </div>
+  </div>
+</header>
+<div class="hero">
+  <div class="bg"><div class="ph">Full-bleed photo — James + service van, Lake Lanier backdrop</div></div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="kick">Navy Veteran Owned · RVTAA Certified</div>
+      <h1>Enjoy The Journey.<br><em>We Handle The Repairs.</em></h1>
+      <p>Certified mobile RV service and repair at your campsite, storage lot, or driveway — anywhere in Gainesville, Lake Lanier, and North Georgia. No towing. No dealership wait list.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-red">Request Service</a>
+        <a href="sms:7705192828" class="btn btn-line">Text Us A Photo</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="wrap">
+      <div class="t"><i></i>U.S. Navy Veteran Owned</div>
+      <div class="t"><i></i>RVTAA Certified Technician</div>
+      <div class="t"><i></i>NRVTA Trained</div>
+      <div class="t"><i></i>Transparent, Upfront Pricing</div>
+    </div>
+  </div>
+</div>
+<div class="ticker">
+  <div class="ticker-track">
+    <span><i>Gainesville</i><i>Lake Lanier</i><i>Buford</i><i>Flowery Branch</i><i>Dahlonega</i><i>Cleveland</i><i>Helen</i><i>Dawsonville</i><i>Cumming</i><i>Jefferson</i><i>Braselton</i><i>Commerce</i></span>
+    <span><i>Gainesville</i><i>Lake Lanier</i><i>Buford</i><i>Flowery Branch</i><i>Dahlonega</i><i>Cleveland</i><i>Helen</i><i>Dawsonville</i><i>Cumming</i><i>Jefferson</i><i>Braselton</i><i>Commerce</i></span>
+  </div>
+</div>
+<section class="svc-sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What We Fix</div>
+      <h2>Mobile RV Services, Done Right</h2>
+      <p>Every job starts with an honest diagnosis and a fair, upfront quote. Class A, B, C, fifth wheels, and towables.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><h3>A/C &amp; Heating</h3><p>Roof AC diagnosis, repair, and replacement. Furnace and heat pump service to keep every trip comfortable.</p><a href="#">Service Details →</a></div>
+      <div class="svc"><h3>Water Heaters</h3><p>Repair and replacement for gas, electric, and tankless systems — hot water back the same visit whenever possible.</p><a href="#">Service Details →</a></div>
+      <div class="svc"><h3>Tanks &amp; Plumbing</h3><p>Fresh, gray, and black tank service, leaks, pumps, and valves. The jobs nobody wants — handled.</p><a href="#">Service Details →</a></div>
+      <div class="svc"><h3>Slide-Outs &amp; Jacks</h3><p>Stuck slide, failed leveling jack, awning trouble — mechanical and hydraulic systems restored on site.</p><a href="#">Service Details →</a></div>
+      <div class="svc"><h3>Electrical Systems</h3><p>12V and shore power diagnostics, batteries, inverters, converters, and wiring repairs.</p><a href="#">Service Details →</a></div>
+      <div class="svc"><h3>Preventive Maintenance</h3><p>Seasonal inspections, roof reseals, bearing packs, and winterization to stop breakdowns before they start.</p><a href="#">Service Details →</a></div>
+    </div>
+  </div>
+</section>
+<section class="story" id="about">
+  <div class="wrap">
+    <div class="imgcol">
+      <div class="ph">James &amp; Brenda with the rig — real photo</div>
+      <div class="flag"><b>Veteran Owned &amp; Operated</b><small>U.S. Navy discipline in every job</small></div>
+    </div>
+    <div>
+      <div class="eyebrow">The People Behind The Wrench</div>
+      <h2>Service Is What We Do. Integrity Is Who We Are.</h2>
+      <p>Triumphant RV Solutions is owned and operated by James &amp; Brenda Barber. James is a U.S. Navy veteran and certified RVTAA technician who believes every RVer deserves honest answers, fair prices, and work done right the first time.</p>
+      <p>We're not a dealership with a six-week wait list. We're your neighbors — and we come to you, so your RV problems don't cost you your travel season.</p>
+      <div class="creds">
+        <div class="cred"><b>U.S. Navy Veteran</b><small>Accountability in every job</small></div>
+        <div class="cred"><b>RVTAA Certified</b><small>Registered RV technician</small></div>
+        <div class="cred"><b>Family Owned</b><small>Husband-and-wife team</small></div>
+        <div class="cred"><b>Upfront Pricing</b><small>No hidden costs, ever</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Where We Work</div>
+      <h2>We Cover North Georgia</h2>
+      <p>Based in Gainesville, minutes from Lake Lanier — serving campsites, storage lots, and driveways across 12+ counties.</p>
+    </div>
+    <div class="wrap-grid" style="padding:0">
+      <ul>
+        <li><a href="#">Gainesville</a></li>
+        <li><a href="#">Lake Lanier</a></li>
+        <li><a href="#">Buford</a></li>
+        <li><a href="#">Flowery Branch</a></li>
+        <li><a href="#">Dahlonega</a></li>
+        <li><a href="#">Cleveland &amp; Helen</a></li>
+        <li><a href="#">Dawsonville</a></li>
+        <li><a href="#">Cumming</a></li>
+        <li><a href="#">Jefferson</a></li>
+        <li><a href="#">Braselton</a></li>
+        <li><a href="#">Commerce</a></li>
+        <li><a href="#">Athens Area</a></li>
+      </ul>
+      <div class="map ph">Service area map — Lake Lanier + North Georgia counties</div>
+    </div>
+    <div class="note">Outside these areas? Call — we can often work something out.</div>
+  </div>
+</section>
+<section class="rev">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Proof</div>
+      <h2>What RVers Say About Us</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rcard"><div class="stars">★★★★★</div><p>"[Pull James's actual Google review — response time, honesty, quality of work.]"</p><b>Customer Name</b><small>Gainesville, GA</small></div>
+      <div class="rcard"><div class="stars">★★★★★</div><p>"[Second real review — ideally one mentioning a campsite or Lake Lanier repair.]"</p><b>Customer Name</b><small>Lake Lanier, GA</small></div>
+      <div class="rcard"><div class="stars">★★★★★</div><p>"[Third real review — a maintenance or emergency call story.]"</p><b>Customer Name</b><small>Dahlonega, GA</small></div>
+    </div>
+    <div class="rev-foot"><a href="#" class="btn btn-line-d">Read All Reviews On Google</a></div>
+  </div>
+</section>
+<section id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Stay Trip-Ready</div>
+      <h2>Maintenance Plans That Prevent Breakdowns</h2>
+      <p>Placeholder tiers — James sets real pricing. Recurring care keeps your RV road-ready and your repair bills small.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan"><h3>Seasonal Check</h3><div class="price">$—</div><div class="per">Per Visit</div><ul><li>Spring or fall multi-point inspection</li><li>Roof &amp; seal check</li><li>Systems test — water, power, propane</li><li>Written condition report</li></ul><a href="#book" class="btn btn-line-d">Choose Plan</a></div>
+      <div class="plan fea"><h3>Trip-Ready Annual</h3><div class="price">$—</div><div class="per">Per Year</div><ul><li>Two full inspections per year</li><li>Winterization + de-winterization</li><li>Priority scheduling</li><li>Discounted repair labor</li></ul><a href="#book" class="btn btn-red">Choose Plan</a></div>
+      <div class="plan"><h3>Full-Timer Care</h3><div class="price">$—</div><div class="per">Per Year</div><ul><li>Quarterly inspections</li><li>Same-week priority response</li><li>Discounted labor + parts sourcing</li><li>Direct line to your technician</li></ul><a href="#book" class="btn btn-line-d">Choose Plan</a></div>
+    </div>
+  </div>
+</section>
+<section class="classes" id="classes">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Learn From A Certified Tech</div>
+      <h2>RV Owner Classes — <em>Know Your Rig</em></h2>
+      <p>Hands-on classes for new and seasoned RVers, taught by a certified technician. Fewer surprises on the road, more confidence at the campsite.</p>
+      <ul>
+        <li>New owner walkthrough — your RV's systems, explained</li>
+        <li>Preventive maintenance you can do yourself</li>
+        <li>What to check before every trip</li>
+      </ul>
+      <a href="#book" class="btn btn-red">Ask About Classes</a>
+    </div>
+    <div class="ph">Class photo — James teaching at the rig</div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Straight Answers</div>
+      <h2>Questions RVers Ask Us</h2>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Do you really come to my campsite?</summary><p>Yes. Triumphant RV Solutions is a fully mobile service — we repair your RV at your campsite, storage lot, or driveway anywhere in the Gainesville and North Georgia area, so you never haul it to a shop.</p></details>
+      <details><summary>What types of RVs do you service?</summary><p>We service Class A, Class B, and Class C motorhomes, fifth wheels, and towable travel trailers throughout North Georgia — from single repairs to full maintenance plans.</p></details>
+      <details><summary>How fast can you get to me near Lake Lanier?</summary><p>We're based minutes from Lake Lanier in Gainesville, GA. Most service requests near the lake are answered the same day — call or text 770-519-2828 with your location.</p></details>
+      <details><summary>Do you give prices up front?</summary><p>Yes. Every job gets a fair, transparent quote before work begins. No hidden fees, no surprise invoices — that's a promise from a veteran-owned business.</p></details>
+      <details><summary>Are you certified and insured?</summary><p>Yes. James Barber is an RVTAA-certified, NRVTA-trained RV technician, and Triumphant RV Solutions is fully insured for mobile RV repair across North Georgia.</p></details>
+    </div>
+  </div>
+</section>
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">From The Field</div>
+      <h2>RV Tips That Save You Money</h2>
+      <p>Honest maintenance advice from a certified tech — the content engine that keeps this site climbing Google.</p>
+    </div>
+    <div class="blog-grid">
+      <a class="bcard" href="#"><div class="ph lt">Post image</div><div class="bd"><small>Seasonal</small><h3>Getting Your RV Lake-Ready for Summer at Lanier</h3><p>The pre-season checklist that prevents the most common July breakdowns.</p></div></a>
+      <a class="bcard" href="#"><div class="ph lt">Post image</div><div class="bd"><small>Maintenance</small><h3>Why RV Roof Seals Fail in Georgia Heat</h3><p>What to inspect, when to reseal, and what it costs if you don't.</p></div></a>
+      <a class="bcard" href="#"><div class="ph lt">Post image</div><div class="bd"><small>Buying Guide</small><h3>5 Things To Check Before Buying a Used RV</h3><p>A certified inspector's shortlist — bring this to your next walkthrough.</p></div></a>
+    </div>
+  </div>
+</section>
+<div class="cta-band" id="book">
+  <div class="wrap">
+    <div>
+      <h2>Have A Triumphant Day.<br>Let Us Handle The RV.</h2>
+      <p>Call, text, or request service online — we come to you.</p>
+    </div>
+    <div class="btns">
+      <a href="tel:7705192828" class="btn btn-blk">Call 770-519-2828</a>
+      <a href="sms:7705192828" class="btn btn-line">Text Us</a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo"><div class="mark">T</div><div><b>Triumphant RV<br>Solutions</b><small>Mobile Service &amp; Repair</small></div></div>
+        <p>Navy veteran owned and operated by James &amp; Brenda Barber. Certified mobile RV repair across North Georgia.</p>
+      </div>
+      <div><h4>Services</h4><a href="#">A/C &amp; Heating</a><a href="#">Water Heaters</a><a href="#">Tanks &amp; Plumbing</a><a href="#">Slide-Outs &amp; Jacks</a><a href="#">Electrical</a><a href="#">Maintenance Plans</a></div>
+      <div><h4>Service Area</h4><a href="#">Gainesville</a><a href="#">Lake Lanier</a><a href="#">Buford</a><a href="#">Dahlonega</a><a href="#">Dawsonville</a><a href="#">All Locations</a></div>
+      <div><h4>Contact</h4><p>770-519-2828</p><p>Call or text anytime</p><p>Gainesville, GA</p><a href="#">Google Business Profile</a></div>
+    </div>
+    <div class="f-bottom">
+      <div>© 2026 Triumphant RV Solutions LLC · Gainesville, Georgia</div>
+      <div>Veteran Owned · RVTAA Certified · Fully Insured</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
