@@ -15,6 +15,8 @@ Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's 
 - Homepage: dark static map w/ red 1-hr ring, GBP roof photo, 4 real Google reviews (excl. Todd's own)
 - Mobile: topbar 2-line w/ phone on line 2; menu = scrollable, collapsed accordions (+/− toggles), 17.5px, 110px sticky-bar clearance. Hover-open = desktop-only (iOS sticky-hover bug fixed w/ #nav + !important)
 
+- LEAD MAGNET (July 3): North Georgia RV Traveler's Guide PDF live at assets/north-georgia-rv-guide.pdf + homepage section (sec dark, after service areas, before FAQ, data-ga-event=guide_download for production GA4 wiring). 17pp, area QRs point to PRODUCTION triumphantrv.com/service-areas/ URLs (404 until launch — intentional). Cover thumb: assets/img/guide-cover.jpg. Wikimedia CC photo credits on back page. Source build lives in the lead-magnet chat; regen needs that session or rebuild.
+
 ## KEY DECISIONS
 - Demo is NOINDEXED (remove at production). Forms in demo mode (fake success; wire Formspree/CRM at launch)
 - Team voice sitewide ("we/our certified technicians"); James appears only About/reviews/TBF
