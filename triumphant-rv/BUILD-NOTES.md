@@ -22,6 +22,8 @@ Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's 
   · At production port: copy PDF + cover thumb + homepage section across; QRs start resolving at launch — no regen needed. Regen only if slugs change (source build in lead-magnet chat)
 - BLOG HANDOFF (July 3): 18-prompt Marblism production file for Argeline (global brand brief + self-contained per-post prompts, seasonal flags Oktoberfest/Petit Le Mans, per-post verified links) — delivered in lead-magnet chat outputs; deeper layer on top of the 20-topic Drive doc (PENDING #4). Get it to Argeline alongside the Drive doc.
 
+- SERVICE PAGE PHOTOS (Jul 3, image pass): water-heaters = real GBP anode-rod + heating-element wear photos w/ captions (svc-anode-rods.jpg, svc-heating-elements.jpg — Todd IDed g1/g3 from GBP); electrical = Todd-approved generated multimeter/converter shot (svc-electrical.jpg); slide-outs-jacks = photo from live triumphantrv.com Wix media (svc-slideout.jpg). All placeholders on service pages cleared. Unused: Todd's generated water-heater + slideout images (real assets preferred). Hero/'technician at work' slots elsewhere unchanged.
+
 ## KEY DECISIONS
 - Demo is NOINDEXED (remove at production). Forms in demo mode (fake success; wire Formspree/CRM at launch)
 - Team voice sitewide ("we/our certified technicians"); James appears only About/reviews/TBF
