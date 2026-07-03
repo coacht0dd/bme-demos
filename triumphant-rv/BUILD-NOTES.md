@@ -15,7 +15,12 @@ Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's 
 - Homepage: dark static map w/ red 1-hr ring, GBP roof photo, 4 real Google reviews (excl. Todd's own)
 - Mobile: topbar 2-line w/ phone on line 2; menu = scrollable, collapsed accordions (+/− toggles), 17.5px, 110px sticky-bar clearance. Hover-open = desktop-only (iOS sticky-hover bug fixed w/ #nav + !important)
 
-- LEAD MAGNET (July 3): North Georgia RV Traveler's Guide PDF live at assets/north-georgia-rv-guide.pdf + homepage section (sec dark, after service areas, before FAQ, data-ga-event=guide_download for production GA4 wiring). 17pp, area QRs point to PRODUCTION triumphantrv.com/service-areas/ URLs (404 until launch — intentional). Cover thumb: assets/img/guide-cover.jpg. Wikimedia CC photo credits on back page. Source build lives in the lead-magnet chat; regen needs that session or rebuild.
+- LEAD MAGNET (July 3): "North Georgia By RV" Traveler's Guide — 17pp PDF at assets/north-georgia-rv-guide.pdf + homepage section (sec dark, between service-areas grid and FAQ; btn carries data-ga-event=guide_download → wire GA4 event at production). Cover thumb: assets/img/guide-cover.jpg
+  · QR codes: 12 area QRs → PRODUCTION https://www.triumphantrv.com/service-areas/[slug]/ (slugs match repo exactly; 404 until DNS cutover — intentional). Back-cover QR → triumphantrv.com. Campground names in guide are direct hyperlinks (gastateparks/recreation.gov/etc.)
+  · Content guardrails honored: no Atlanta Dragway, Commerce Station ≠ KOA, Corps campgrounds phrased "check status", R-Ranch = membership, exact superlatives (729ft / 11.8M / Oktoberfest-since-1970)
+  · Photos: James+Brenda banner (Drive) + Wikimedia Commons CC (credits line on back page — REQUIRED by licenses, keep it). Logo: newlogo.png from Todd (white-art variant for dark pages, original for light)
+  · At production port: copy PDF + cover thumb + homepage section across; QRs start resolving at launch — no regen needed. Regen only if slugs change (source build in lead-magnet chat)
+- BLOG HANDOFF (July 3): 18-prompt Marblism production file for Argeline (global brand brief + self-contained per-post prompts, seasonal flags Oktoberfest/Petit Le Mans, per-post verified links) — delivered in lead-magnet chat outputs; deeper layer on top of the 20-topic Drive doc (PENDING #4). Get it to Argeline alongside the Drive doc.
 
 ## KEY DECISIONS
 - Demo is NOINDEXED (remove at production). Forms in demo mode (fake success; wire Formspree/CRM at launch)
