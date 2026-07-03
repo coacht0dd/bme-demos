@@ -2,7 +2,12 @@
 Updated: July 3, 2026 · Session: full demo build (archived chat)
 Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's — production port pending)
 
-## STATUS: Demo functionally complete. Awaiting Todd's Stage 6 sign-off → James review → production port.
+## STATUS: STAGE 6 SIGNED OFF (Todd, Jul 3 2026). Next: James review → production port.
+
+## PRODUCTION ENVIRONMENT (verified Jul 3 2026)
+- Repo: Triumphant-RV/project-genesis (owned by James's GitHub org "Triumphant-RV") — fresh Lovable TanStack Start scaffold (NOT base-template remix; port builds from demo blueprint). Routes: /src/routes/ (only __root + index so far)
+- Lovable: lovable.dev/projects/98920119-1bf8-4612-a849-8f1af13f699a (set up by laurenbmasters) — two-way sync CONFIRMED live
+- Access: Todd's coachtoddmasters account is collaborator w/ push. Classic PAT in project instructions ("production" token). Demo PAT ≠ production PAT.
 
 ## BUILT & LIVE (29 pages)
 - Home, About, Plans, Contact, Services hub +6, Service Areas hub +12, Campgrounds hub, Blog +3 posts
@@ -32,7 +37,6 @@ Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's 
 - .nojekyll added — fixes recurring stuck GitHub Pages builds. If Pages hangs again: Todd flips Settings→Pages→GitHub Actions
 
 ## PENDING
-1. Todd: Stage 6 sign-off (mobile menu fix was last item)
 2. James review: 15-pt checklist scoped in archived chat — offer open to make Google Doc
 3. James intake confirms: story, plan tier pricing, trip fee, domain registrar, Navy details, GBP roof-photo ownership, GBP hours fix ("Open 24hrs" → real hours + 24/7 emergency as service)
 4. Blog list for Argeline: DONE → Drive doc 1RaJq-el6gawjJ_CvZRy4NYZNqyd-ktEvgJSC5ynHFrg (20 topics, 3 tiers)
