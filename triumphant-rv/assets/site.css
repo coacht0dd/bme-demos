@@ -164,3 +164,11 @@ footer a{color:#C9C9C6;text-decoration:none}footer a:hover{color:#fff}
 .honor-pct b{display:block;font-size:38px}
 .honor-pct span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
 @media(max-width:640px){.save-pct{font-size:48px}}
+/* Honors card w/ photos */
+.honor-card{background:#fff;border:1px solid var(--line)}
+.honor-pics{display:grid;grid-template-columns:1fr 1fr}
+.honor-pics img{width:100%;height:200px;object-fit:cover;display:block}
+.honor-body{padding:22px 26px 26px;display:flex;gap:18px;align-items:flex-start}
+.honor-body h2{margin-bottom:8px}
+.honor-body p{color:var(--muted)}
+@media(max-width:640px){.honor-pics img{height:130px}.honor-body{flex-direction:column;gap:14px}}
