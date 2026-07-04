@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Case Evaluation — Carter, Carter &amp; Carter | Business Masters Enterprises</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Expanded:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bme-blue:#1D5BF0;--bme-blue-d:#1546C0;--bme-navy:#0B1B33;--bme-paper:#F4F6FA;--bme-white:#FFFFFF;--bme-ink:#132033;--bme-muted:#5B6675;--bme-line:#D8DEE8;--pass:#1F7A45;--warn:#B98A12;--fail:#C43025}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Archivo',sans-serif;background:var(--bme-paper);color:var(--bme-ink);line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:'Archivo Expanded','Archivo',sans-serif}
+.masthead{background:var(--bme-navy);color:#fff;padding:56px 0 40px;border-bottom:5px solid var(--bme-blue)}
+.tag{color:var(--bme-blue);text-transform:uppercase;letter-spacing:.24em;font-weight:700;font-size:12px;margin-bottom:14px}
+.masthead h1{font-size:34px;text-transform:uppercase;line-height:1.1;letter-spacing:-.01em}
+.masthead p{color:#9FB0C8;margin-top:12px;font-size:16px;max-width:640px}
+.meta{display:flex;flex-wrap:wrap;border:1px solid rgba(255,255,255,.2);margin-top:28px}
+.meta div{padding:14px 20px;border-right:1px solid rgba(255,255,255,.2);flex:1;min-width:180px}
+.meta div:last-child{border-right:0}
+.meta small{display:block;color:#7E90AA;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:700;margin-bottom:4px}
+.meta b{font-size:14px}
+section{padding:52px 0 8px}
+.pnum{color:var(--bme-blue);font-weight:800;text-transform:uppercase;letter-spacing:.2em;font-size:12px;margin-bottom:8px}
+section>.wrap>h2{font-size:26px;text-transform:uppercase;color:var(--bme-navy);letter-spacing:-.005em;padding-bottom:14px;position:relative;margin-bottom:26px}
+section>.wrap>h2::after{content:"";position:absolute;left:0;bottom:0;width:50px;height:4px;background:var(--bme-blue)}
+.card{background:var(--bme-white);border:1px solid var(--bme-navy);padding:0;margin-bottom:34px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:14px}
+thead th{background:var(--bme-navy);color:#fff;text-align:left;padding:13px 16px;text-transform:uppercase;letter-spacing:.1em;font-size:11.5px;font-family:'Archivo Expanded'}
+tbody td{padding:13px 16px;border-bottom:1px solid var(--bme-line);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+.g{font-family:'Archivo Expanded';font-weight:800;font-size:15px}
+.st{font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;padding:4px 10px;display:inline-block}
+.st.pass{background:#E4F1E9;color:var(--pass)}.st.fair{background:#F7EFD9;color:var(--warn)}.st.fail{background:#F9E4E1;color:var(--fail)}
+.legend{padding:14px 16px;background:var(--bme-paper);font-size:12.5px;color:var(--bme-muted);border-top:1px solid var(--bme-line)}
+.finding{background:var(--bme-white);border:1px solid var(--bme-navy);padding:22px 24px;margin-bottom:14px}
+.finding .n{color:var(--bme-blue);font-family:'Archivo Expanded';font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+.finding b{display:block;font-size:16.5px;color:var(--bme-navy);margin-bottom:6px}
+.finding p{color:var(--bme-muted);font-size:14.5px}
+.callout{background:var(--bme-navy);border-left:5px solid var(--bme-blue);color:#fff;padding:24px 26px;margin:26px 0 34px}
+.callout .lbl{color:var(--bme-blue);text-transform:uppercase;letter-spacing:.18em;font-weight:800;font-size:11.5px;margin-bottom:8px;font-family:'Archivo Expanded'}
+.callout p{color:#C7D3E4;font-size:15px}
+.callout p b{color:#fff}
+.yn{font-weight:800;font-family:'Archivo Expanded'}
+.yn.y{color:var(--pass)}.yn.n{color:var(--fail)}
+tr.you td{background:#EDF2FE;border-top:2px solid var(--bme-blue);border-bottom:2px solid var(--bme-blue) !important;font-weight:600}
+.plan{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--bme-white);border:1px solid var(--bme-navy);margin-bottom:40px}
+.plan .col{padding:26px}
+.plan .col:first-child{border-right:1px solid var(--bme-line);background:#FBF7F6}
+.plan h3{font-size:15px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
+.plan .col:first-child h3{color:var(--fail)}
+.plan .col:last-child h3{color:var(--bme-blue)}
+.plan ul{list-style:none}
+.plan li{padding:8px 0 8px 26px;position:relative;font-size:14px;border-bottom:1px solid var(--bme-line)}
+.plan li:last-child{border-bottom:0}
+.plan .col:first-child li::before{content:"✕";position:absolute;left:2px;color:var(--fail);font-weight:800}
+.plan .col:last-child li::before{content:"";position:absolute;left:2px;top:14px;width:9px;height:9px;background:var(--bme-blue)}
+footer{background:var(--bme-navy);color:#9FB0C8;border-top:4px solid var(--bme-blue);padding:26px 0;margin-top:26px;font-size:13.5px;text-align:center}
+footer b{color:#fff}
+@media(max-width:720px){.plan{grid-template-columns:1fr}.plan .col:first-child{border-right:0;border-bottom:1px solid var(--bme-line)}.masthead h1{font-size:26px}}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="wrap">
+    <div class="tag">Website Case Evaluation</div>
+    <h1>Findings of Fact:<br>callcarterlaw.com</h1>
+    <p>A plain-English evaluation of the firm's website — the same way you'd evaluate a case: the facts, the exhibits, and what the evidence supports.</p>
+    <div class="meta">
+      <div><small>Prepared For</small><b>Frank H. Carter · Carter, Carter &amp; Carter</b></div>
+      <div><small>Prepared By</small><b>Business Masters Enterprises</b></div>
+      <div><small>Site Inspected</small><b>callcarterlaw.com</b></div>
+      <div><small>Date</small><b>July 4, 2026</b></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="pnum">Part 1</div>
+    <h2>The Evidence — Inspection Sheet</h2>
+    <div class="card">
+      <table>
+        <thead><tr><th style="width:34%">Checkpoint</th><th style="width:12%">Status</th><th style="width:9%">Grade</th><th>Finding (verified July 4, 2026)</th></tr></thead>
+        <tbody>
+          <tr><td>Personal Injury practice page</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>Returns a 404 error. The firm's injury page does not exist on the live site.</td></tr>
+          <tr><td>Attorney bio pages (Frank &amp; Anna-Marie)</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>Both bio pages return 404. Prospective clients cannot find either attorney.</td></tr>
+          <tr><td>Reviews on the website</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>Reviews page returns 404. 116 Google reviews (4.4★) — zero appear on the site.</td></tr>
+          <tr><td>Homepage headline (H1)</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>No H1 exists anywhere on the homepage.</td></tr>
+          <tr><td>Title tag &amp; meta description</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>Title is "Carter Law |" — no city, no practice area. Meta description missing entirely.</td></tr>
+          <tr><td>Schema markup (LocalBusiness / Attorney / FAQ)</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>Zero structured-data blocks found on the homepage.</td></tr>
+          <tr><td>Location / county pages</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>The firm serves 17 counties; no county or city page exists for any of them.</td></tr>
+          <tr><td>FAQ / AI-answer readiness (AEO)</td><td><span class="st fail">Fail</span></td><td class="g">F</td><td>No FAQ content. AI assistants (ChatGPT, Google AI) have nothing to quote.</td></tr>
+          <tr><td>Online intake / easy contact path</td><td><span class="st fair">Fair</span></td><td class="g">C</td><td>Phone number present; no case-evaluation form, no text option on key pages.</td></tr>
+          <tr><td>Analytics (GA4)</td><td><span class="st pass">Pass</span></td><td class="g">B</td><td>GA4 tracking is installed — measurement foundation exists.</td></tr>
+          <tr><td>Robots.txt / crawlability</td><td><span class="st pass">Pass</span></td><td class="g">B</td><td>robots.txt resolves; site is crawlable. Sitemap redirects — to be confirmed.</td></tr>
+          <tr><td>Google Business Profile</td><td><span class="st pass">Pass</span></td><td class="g">A</td><td>Claimed and active: 4.4★ across 116 reviews. A genuine, earned asset.</td></tr>
+        </tbody>
+      </table>
+      <div class="legend">Every FAIL above was verified live against callcarterlaw.com on July 4, 2026 — HTTP status codes, page source, and Google Places data. Nothing estimated.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="pnum">Part 2</div>
+    <h2>What the Evidence Means</h2>
+    <div class="finding"><div class="n">Finding 01</div><b>Your personal injury practice is invisible — the page literally doesn't exist.</b><p>Anyone who searches, finds you, and clicks "Personal Injury" hits a dead 404 page. In a market where one signed case is worth five figures in fees, every dead click is a case that walks to Valdosta.</p></div>
+    <div class="finding"><div class="n">Finding 02</div><b>Google doesn't know what you do or where you do it.</b><p>No H1, a title tag of "Carter Law |", no meta description, and zero schema markup. When someone in Cook County searches "injury lawyer near me," Google guesses — and it guesses a billboard firm 25 miles away.</p></div>
+    <div class="finding"><div class="n">Finding 03</div><b>Your 116 Google reviews are working for Google, not for you.</b><p>You've earned a 4.4-star reputation. Not one of those reviews appears on your website — the place where an injured person decides whether to call you or keep scrolling.</p></div>
+    <div class="finding"><div class="n">Finding 04</div><b>You serve 17 counties but can only be found in one town.</b><p>There is no page for Valdosta, Tifton, Moultrie, Nashville, or the I-75 corridor. No page means no ranking — you're forfeiting every town except your own street address.</p></div>
+    <div class="finding"><div class="n">Finding 05</div><b>Your prospective clients can't find you — or your father's legacy.</b><p>Both attorney bios 404. Three generations of Carters practicing in Adel is the most powerful trust story in your market, and the website tells none of it.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="pnum">Part 3</div>
+    <h2>Who's Winning Your Searches</h2>
+    <div class="card">
+      <table>
+        <thead><tr><th>Firm</th><th>Location Pages</th><th>Reviews On Site</th><th>Online Intake</th><th>FAQ / AI-Ready</th><th>Working PI Pages</th></tr></thead>
+        <tbody>
+          <tr><td>The Studstill Firm (Valdosta)</td><td class="yn y">Y</td><td class="yn y">Y</td><td class="yn y">Y</td><td class="yn y">Y</td><td class="yn y">Y</td></tr>
+          <tr><td>Jody D. Peterman (Valdosta)</td><td class="yn n">N</td><td class="yn y">Y</td><td class="yn y">Y</td><td class="yn n">N</td><td class="yn y">Y</td></tr>
+          <tr><td>Bennett Law (Valdosta)</td><td class="yn y">Y</td><td class="yn y">Y</td><td class="yn y">Y</td><td class="yn n">N</td><td class="yn y">Y</td></tr>
+          <tr><td>Dodd &amp; Burnham (Valdosta)</td><td class="yn n">N</td><td class="yn y">Y</td><td class="yn y">Y</td><td class="yn n">N</td><td class="yn y">Y</td></tr>
+          <tr class="you"><td>Carter, Carter &amp; Carter (Adel)</td><td class="yn n">N</td><td class="yn n">N</td><td class="yn n">N</td><td class="yn n">N</td><td class="yn n">N</td></tr>
+        </tbody>
+      </table>
+      <div class="legend">Competitor assessment based on public website review, June–July 2026. Columns reflect what exists on each firm's live site.</div>
+    </div>
+    <div class="callout">
+      <div class="lbl">The Opening</div>
+      <p>Every competitor is fighting over "Valdosta injury lawyer" — a keyword that costs <b>$150–$500+ per click</b> in Google Ads. <b>Nobody owns Adel, Cook County, or the I-75 corridor organically.</b> You're the only firm that's actually FROM here. The hometown position is sitting empty — and it's free.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="pnum">Part 4</div>
+    <h2>The Plan</h2>
+    <div class="plan">
+      <div class="col">
+        <h3>Today's Site</h3>
+        <ul>
+          <li>Personal injury page — 404</li>
+          <li>Both attorney bios — 404</li>
+          <li>Reviews page — 404, zero reviews shown</li>
+          <li>No H1, no meta description, no schema</li>
+          <li>No county or city pages (0 of 17)</li>
+          <li>No FAQ, invisible to AI assistants</li>
+          <li>No case-evaluation form or text option</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>What We Build</h3>
+        <ul>
+          <li>Conversion-built PI homepage — hometown positioning, I-75 corridor angle</li>
+          <li>Dedicated pages: car, truck, motorcycle, premises, wrongful death, workers' comp</li>
+          <li>County/city pages for all 17 counties — the free organic land grab</li>
+          <li>Your 116 Google reviews pulled onto the site, stars displayed</li>
+          <li>Full schema: LocalBusiness, Attorney, Service, FAQ</li>
+          <li>AEO-formatted FAQ — quotable by ChatGPT and Google AI</li>
+          <li>Free case-evaluation form + click-to-call + text option</li>
+          <li>Attorney bios restored — three generations, told right</li>
+          <li>Update it yourself — just tell the AI what to change</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><b>Business Masters Enterprises</b> — AI Website Ownership Platform · Todd Masters · 678-822-1691 · toddmasters.coach<br>Your domain. Your website. Your content. Forever.</div>
+</footer>
+
+</body>
+</html>
