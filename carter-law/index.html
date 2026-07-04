@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carter, Carter &amp; Carter — Personal Injury Attorneys, Adel, GA</title>
+<meta name="description" content="Adel &amp; Cook County personal injury lawyers. Car accidents on I-75, truck accidents, premises liability, wrongful death. Free case evaluation. No fee unless we win. Call (229) 896-4513.">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14161A; --char:#1C1F24; --char2:#23262C;
+    --navy:#152A47; --navy-d:#0E1E33;
+    --gold:#B8912F; --gold-l:#D4AF4E;
+    --paper:#F7F5F1; --paper-d:#EDEAE3; --white:#FFFFFF;
+    --muted:#5C5F66; --line:#DFDCD4; --dline:rgba(255,255,255,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--white);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  h1,h2,h3,.serif{font-family:'Libre Caslon Text',serif}
+  .ph{background:repeating-linear-gradient(45deg,#20242B,#20242B 16px,#191C22 16px,#191C22 32px);display:flex;align-items:center;justify-content:center;color:#7D8189;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-align:center;padding:14px}
+  .ph.lt{background:repeating-linear-gradient(45deg,#E9E6DF,#E9E6DF 16px,#E1DED6 16px,#E1DED6 32px);color:#8B8E94}
+
+  .btn{display:inline-block;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13.5px;padding:16px 28px;text-decoration:none;transition:all .15s}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--gold-l)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-d)}
+  .btn-line{border:1.5px solid #fff;color:#fff}
+  .btn-line:hover{background:#fff;color:var(--navy)}
+  .btn-line-d{border:1.5px solid var(--navy);color:var(--navy)}
+  .btn-line-d:hover{background:var(--navy);color:#fff}
+
+  /* Topbar + header */
+  .topbar{background:var(--navy);color:#fff;font-weight:500;font-size:13.5px;text-align:center;padding:9px 12px}
+  .topbar b{color:var(--gold-l)}
+  .topbar a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+  header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);z-index:50;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:86px}
+  .logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+  .logo .mark{width:48px;height:48px;background:var(--navy);color:var(--gold-l);display:flex;align-items:center;justify-content:center;font-family:'Libre Caslon Text',serif;font-weight:700;font-size:21px;border-bottom:3px solid var(--gold)}
+  .logo b{font-family:'Libre Caslon Text',serif;font-size:19px;line-height:1.1;display:block;letter-spacing:.01em}
+  .logo small{color:var(--muted);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;font-family:'Inter',sans-serif}
+  nav ul{display:flex;gap:28px;list-style:none;font-weight:600;font-size:14px}
+  nav a{color:var(--ink);text-decoration:none}
+  nav a:hover{color:var(--gold)}
+  .nav-cta{display:flex;gap:14px;align-items:center}
+  .nav-phone{font-weight:800;font-size:16.5px;color:var(--navy);text-decoration:none;letter-spacing:.01em}
+  .nav-phone:hover{color:var(--gold)}
+  .nav-phone small{display:block;font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.14em}
+
+  /* Hero */
+  .hero{background:var(--navy-d);color:#fff;position:relative;overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0;opacity:.5}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,30,51,.96) 0%,rgba(14,30,51,.82) 48%,rgba(14,30,51,.35) 100%)}
+  .hero .inner{position:relative;z-index:2;padding:104px 0 110px;max-width:660px}
+  .kick{font-weight:700;color:var(--gold-l);letter-spacing:.24em;text-transform:uppercase;font-size:12px;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+  .kick::before{content:"";width:34px;height:2px;background:var(--gold)}
+  .hero h1{font-size:56px;font-weight:700;line-height:1.08;letter-spacing:-.005em}
+  .hero h1 em{font-style:italic;color:var(--gold-l)}
+  .hero p{margin:24px 0 34px;font-size:18px;color:#C9CFD8;max-width:540px;font-weight:400}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-note{margin-top:18px;font-size:13.5px;color:#9AA3B0;font-weight:500}
+  .hero-strip{position:relative;z-index:2;border-top:1px solid var(--dline);background:rgba(14,30,51,.65);backdrop-filter:blur(4px)}
+  .hero-strip .wrap{display:flex;justify-content:space-between;gap:20px;padding:18px 32px;flex-wrap:wrap}
+  .hero-strip .t{display:flex;align-items:center;gap:10px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:12.5px;color:#DDE3EA}
+  .hero-strip .t i{width:8px;height:8px;background:var(--gold);font-style:normal;flex:0 0 auto}
+
+  section{padding:96px 0}
+  .sec-head{max-width:700px;margin-bottom:52px}
+  .eyebrow{font-weight:700;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:11.5px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:30px;height:2px;background:var(--gold)}
+  .sec-head h2{font-size:38px;font-weight:700;line-height:1.12;color:var(--navy)}
+  .sec-head p{color:var(--muted);font-size:16.5px;margin-top:14px}
+
+  /* Practice areas */
+  .prac-sec{background:var(--paper)}
+  .prac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .prac{background:var(--white);padding:34px 30px;border-top:3px solid var(--navy);transition:border-color .15s, transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+  .prac:hover{border-top-color:var(--gold);transform:translateY(-3px)}
+  .prac h3{font-size:19px;font-weight:700;margin-bottom:10px;color:var(--navy)}
+  .prac p{color:var(--muted);font-size:14.5px}
+  .prac a{color:var(--gold);text-decoration:none;font-weight:700;font-size:12.5px;display:inline-block;margin-top:16px;text-transform:uppercase;letter-spacing:.1em}
+  .prac a:hover{text-decoration:underline;text-underline-offset:4px}
+
+  /* Results */
+  .results{background:var(--navy-d);color:#fff}
+  .results .sec-head h2{color:#fff}
+  .results .sec-head p{color:#9AA3B0}
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .res{border:1px solid var(--dline);padding:32px 28px;background:rgba(255,255,255,.03)}
+  .res .amt{font-family:'Libre Caslon Text',serif;font-size:40px;font-weight:700;color:var(--gold-l);line-height:1}
+  .res .type{margin-top:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:#DDE3EA}
+  .res p{margin-top:12px;color:#9AA3B0;font-size:14px}
+  .res-note{margin-top:28px;font-size:12.5px;color:#6E7788}
+
+  /* Attorney / story */
+  .story .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  .story .imgcol{position:relative}
+  .story .imgcol .ph{height:520px}
+  .story .imgcol .flag{position:absolute;left:-1px;bottom:32px;background:var(--navy);color:#fff;padding:18px 24px;max-width:280px;border-left:3px solid var(--gold)}
+  .story .imgcol .flag b{font-family:'Libre Caslon Text',serif;font-size:15px;display:block;line-height:1.25}
+  .story .imgcol .flag small{font-size:12.5px;color:#9AA3B0}
+  .story h2{font-size:36px;font-weight:700;line-height:1.12;color:var(--navy)}
+  .story p{margin:16px 0;font-size:16px;color:#3D4046;max-width:540px}
+  .story .creds{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border:1px solid var(--line)}
+  .story .cred{padding:16px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .story .cred:nth-child(2n){border-right:0}
+  .story .cred:nth-child(3),.story .cred:nth-child(4){border-bottom:0}
+  .story .cred b{font-size:14px;color:var(--navy);display:block;line-height:1.25;font-weight:700}
+  .story .cred small{color:var(--muted);font-size:12.5px}
+
+  /* Process */
+  .process{background:var(--paper)}
+  .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:var(--white)}
+  .step{padding:34px 28px;border-right:1px solid var(--line);position:relative}
+  .step:last-child{border-right:0}
+  .step .num{font-family:'Libre Caslon Text',serif;font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.06em;margin-bottom:14px}
+  .step h3{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px}
+  .step p{color:var(--muted);font-size:14px}
+
+  /* Reviews */
+  .rev{background:var(--white)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rcard{background:var(--paper);padding:30px 28px;position:relative;border-left:3px solid var(--gold)}
+  .stars{color:var(--gold);letter-spacing:3px;font-size:14px;margin-bottom:14px}
+  .rcard p{color:#3D4046;font-size:15px;font-family:'Libre Caslon Text',serif;font-style:italic}
+  .rcard b{display:block;margin-top:18px;font-size:13.5px;letter-spacing:.03em;font-weight:700;color:var(--navy);font-family:'Inter',sans-serif;font-style:normal}
+  .rcard small{color:var(--muted);font-size:12.5px}
+  .rev-foot{text-align:center;margin-top:38px}
+
+  /* Area */
+  .area{background:var(--navy-d);color:#fff}
+  .area .sec-head h2{color:#fff}
+  .area .sec-head p{color:#9AA3B0}
+  .area .wrap-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+  .area ul{list-style:none;columns:2;column-gap:24px;margin-top:4px}
+  .area li{break-inside:avoid;border-bottom:1px solid var(--dline)}
+  .area li a{color:#C9CFD8;text-decoration:none;font-weight:600;font-size:15px;display:flex;justify-content:space-between;padding:13px 2px}
+  .area li a:hover{color:#fff}
+  .area li a::after{content:"→";color:var(--gold)}
+  .area .note{margin-top:22px;color:#6E7788;font-size:14px}
+  .area .map{height:440px}
+
+  /* FAQ */
+  .faq-list{max-width:860px}
+  details{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:22px 4px;font-family:'Libre Caslon Text',serif;font-weight:700;font-size:18px;color:var(--navy)}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--gold);font-size:26px;font-weight:400;font-family:'Inter',sans-serif}
+  details[open] summary::after{content:"−"}
+  details p{padding:0 4px 22px;color:var(--muted);max-width:700px;font-size:15px}
+
+  /* Intake */
+  .intake{background:var(--paper)}
+  .intake .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .intake h2{font-size:36px;font-weight:700;line-height:1.12;color:var(--navy)}
+  .intake .lead{color:var(--muted);font-size:16px;margin-top:14px;max-width:460px}
+  .intake .alt{margin-top:30px;border-top:1px solid var(--line);padding-top:24px}
+  .intake .alt b{display:block;font-size:14px;color:var(--navy);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+  .intake .alt a{color:var(--navy);font-weight:800;font-size:22px;text-decoration:none;font-family:'Libre Caslon Text',serif}
+  .intake .alt a:hover{color:var(--gold)}
+  .intake .alt p{color:var(--muted);font-size:13.5px;margin-top:4px}
+  .iform{background:var(--white);padding:38px 34px;box-shadow:0 1px 3px rgba(0,0,0,.07);border-top:3px solid var(--gold)}
+  .iform label{display:block;font-weight:600;font-size:13px;color:var(--ink);margin:18px 0 6px}
+  .iform label:first-child{margin-top:0}
+  .iform input,.iform select,.iform textarea{width:100%;padding:13px 14px;border:1px solid var(--line);font-family:'Inter',sans-serif;font-size:14.5px;background:var(--white);color:var(--ink)}
+  .iform input:focus,.iform select:focus,.iform textarea:focus{outline:2px solid var(--gold);outline-offset:-1px}
+  .iform textarea{min-height:90px;resize:vertical}
+  .iform .btn{width:100%;text-align:center;margin-top:24px;border:none;cursor:pointer;font-family:'Inter',sans-serif}
+  .iform .priv{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+
+  /* CTA */
+  .cta-band{background:var(--navy);color:#fff;padding:80px 0}
+  .cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .cta-band h2{font-size:40px;line-height:1.1;font-weight:700}
+  .cta-band h2 em{font-style:italic;color:var(--gold-l)}
+  .cta-band p{font-weight:400;margin-top:10px;font-size:16px;color:#C9CFD8}
+  .cta-band .btns{display:flex;gap:12px;flex-wrap:wrap}
+
+  footer{background:var(--navy-d);color:#8A93A3;padding:60px 0 30px}
+  .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .f-grid h4{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#fff;margin-bottom:16px;font-weight:700}
+  .f-grid a,.f-grid p{color:#8A93A3;text-decoration:none;font-size:14px;display:block;padding:4px 0}
+  .f-grid a:hover{color:#fff}
+  .f-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .f-logo .mark{width:44px;height:44px;background:var(--navy);color:var(--gold-l);display:flex;align-items:center;justify-content:center;font-family:'Libre Caslon Text',serif;font-weight:700;font-size:20px;border-bottom:3px solid var(--gold)}
+  .f-logo b{font-family:'Libre Caslon Text',serif;font-size:16px;color:#fff;display:block;line-height:1.1}
+  .f-logo small{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+  .f-disc{font-size:12px;color:#5E6878;margin-top:20px;max-width:720px}
+  .f-bottom{border-top:1px solid var(--dline);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap;gap:10px;margin-top:30px}
+
+  @media(max-width:920px){
+    .hero h1{font-size:40px}
+    .hero .inner{padding:76px 0 84px}
+    .story .wrap,.area .wrap-grid,.intake .wrap{grid-template-columns:1fr}
+    .prac-grid,.res-grid,.rev-grid{grid-template-columns:1fr}
+    .proc-grid{grid-template-columns:1fr}
+    .step{border-right:0;border-bottom:1px solid var(--line)}
+    .step:last-child{border-bottom:0}
+    .f-grid{grid-template-columns:1fr 1fr}
+    nav ul{display:none}
+    .nav-phone{display:none}
+    .story .imgcol .ph{height:340px}
+    .sec-head h2{font-size:30px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Injured? We answer <b>24/7</b>. Call or text <a href="tel:2298964513">(229) 896-4513</a> — free case evaluation, no fee unless we win.</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <div class="mark">C</div>
+      <div><b>Carter, Carter<br>&amp; Carter</b><small>Attorneys at Law · Adel, GA</small></div>
+    </a>
+    <nav><ul>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#about">Our Attorneys</a></li>
+      <li><a href="#area">Where We Serve</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <a href="tel:2298964513" class="nav-phone">(229) 896-4513<small>Available 24/7</small></a>
+      <a href="#evaluate" class="btn btn-gold">Free Case Review</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="bg"><div class="ph">Full-bleed photo — Frank Carter at the Cook County courthouse, Parrish Avenue, Adel</div></div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="kick">Hometown Attorneys · Born &amp; Raised in Adel, Cook County</div>
+      <h1>Hurt on I-75 or Here at Home? <em>Your Hometown Firm Has You.</em></h1>
+      <p>Adel personal injury attorneys who handle the insurance companies, the paperwork, and the pressure — so you can focus on healing. Free consultation, and you pay nothing unless we win.</p>
+      <div class="hero-ctas">
+        <a href="tel:2298964513" class="btn btn-gold">Call (229) 896-4513</a>
+        <a href="#evaluate" class="btn btn-line">Start Your Free Case Review</a>
+      </div>
+      <div class="hero-note">No fee unless we win · Free consultation · Local firm, 50+ years combined experience</div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="wrap">
+      <div class="t"><i></i>4.4★ · 116 Google Reviews</div>
+      <div class="t"><i></i>50+ Years Combined Experience</div>
+      <div class="t"><i></i>No Fee Unless We Win</div>
+      <div class="t"><i></i>Answered 24 Hours a Day</div>
+    </div>
+  </div>
+</div>
+
+<section class="prac-sec" id="practice">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How We Can Help</div>
+      <h2>Cases We Take — and Win</h2>
+      <p>Every case starts with a free, honest evaluation. If we take your case, you get a lawyer — not a case number.</p>
+    </div>
+    <div class="prac-grid">
+      <div class="prac"><h3>Car Accidents</h3><p>Hit by a careless driver on I-75? We deal with the adjusters, prove fault, and recover medical bills, lost wages, and pain and suffering.</p><a href="#">Car Accident Claims →</a></div>
+      <div class="prac"><h3>Truck &amp; 18-Wheeler Accidents</h3><p>Commercial truck cases mean corporate defense teams. We move fast to preserve evidence and hold trucking companies accountable.</p><a href="#">Truck Accident Claims →</a></div>
+      <div class="prac"><h3>Motorcycle Accidents</h3><p>Riders get blamed unfairly and hurt badly. We fight the bias and the insurance company to get riders full compensation.</p><a href="#">Motorcycle Claims →</a></div>
+      <div class="prac"><h3>Slip, Trip &amp; Fall</h3><p>Hurt on someone else's property? We prove the hazard, document the negligence, and demand what the injury actually costs you.</p><a href="#">Premises Liability →</a></div>
+      <div class="prac"><h3>Wrongful Death</h3><p>When negligence takes a loved one, we pursue answers and accountability with the care your family deserves.</p><a href="#">Wrongful Death Claims →</a></div>
+      <div class="prac"><h3>Workers' Compensation</h3><p>Injured on the job? We make sure the claim gets filed right, the benefits get paid, and retaliation doesn't happen.</p><a href="#">Work Injury Claims →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why Hometown Matters</div>
+      <h2>Three Generations of Adel Lawyers</h2>
+      <p>Founded by Jack W. Carter and carried on by Frank and Anna-Marie, this firm has spent decades in the same courthouses your case will be heard in.</p>
+    </div>
+    <div class="res-grid">
+      <div class="res"><div class="amt serif">Local</div><div class="type">Born &amp; Raised in Cook County</div><p>All three Carter attorneys were born and raised in Adel. When you call, you talk to a neighbor — not a call center three states away.</p></div>
+      <div class="res"><div class="amt serif">Direct</div><div class="type">Your Lawyer, Not a Case Number</div><p>Big billboard firms hand your file to a paralegal. Here, Frank Carter handles your injury case personally, start to finish.</p></div>
+      <div class="res"><div class="amt serif">Proven</div><div class="type">4.4 Stars · 116 Google Reviews</div><p>Real clients across South Georgia praising communication, professionalism, and results — the record speaks for itself.</p></div>
+    </div>
+    <div class="res-note">Case results depend on the facts of each case. Settlement figures shown only with client permission — ask us about our track record in your consultation.</div>
+  </div>
+</section>
+
+<section class="story" id="about">
+  <div class="wrap">
+    <div class="imgcol">
+      <div class="ph">Real photo — Frank &amp; Anna-Marie Carter outside the Parrish Avenue office</div>
+      <div class="flag"><b>A Family Firm Since Jack W. Carter</b><small>Three Carters, one promise: neighbors first</small></div>
+    </div>
+    <div>
+      <div class="eyebrow">Your Attorney</div>
+      <h2>A Lawyer Who Answers the Phone. A Neighbor Who Shows Up.</h2>
+      <p>Frank H. Carter practices law in the town he grew up in. Carter, Carter &amp; Carter gives injured people in Adel and Cook County what the Valdosta billboard firms don't: direct access to the attorney actually handling the case. When you call, you talk to your lawyer — not a call center.</p>
+      <p>Frank earned his J.D. from Faulkner University's Jones School of Law and has been a member of the State Bar of Georgia since 2011. Alongside his sister and partner Anna-Marie, he handles injury cases from car and truck accidents on the I-75 corridor to premises liability and wrongful death — carrying on the practice their father Jack built.</p>
+      <div class="creds">
+        <div class="cred"><b>Georgia Bar Since 2011</b><small>Bar No. 574042</small></div>
+        <div class="cred"><b>UGA Grad, Adel Native</b><small>B.A. 1994 · Hometown roots</small></div>
+        <div class="cred"><b>Full Injury Practice</b><small>Auto, truck, premises, wrongful death</small></div>
+        <div class="cred"><b>Direct Attorney Access</b><small>Your case, your lawyer's cell</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What Happens Next</div>
+      <h2>Four Steps From "What Do I Do?" to Done</h2>
+    </div>
+    <div class="proc-grid">
+      <div class="step"><div class="num">Step One</div><h3>Free Consultation</h3><p>Call, text, or send the form. We listen, answer your questions, and tell you honestly whether you have a case. No pressure, no obligation.</p></div>
+      <div class="step"><div class="num">Step Two</div><h3>We Investigate</h3><p>Police reports, medical records, witnesses, experts — we build the file while you focus on getting better.</p></div>
+      <div class="step"><div class="num">Step Three</div><h3>We Demand &amp; Negotiate</h3><p>We put a full number on your case — bills, lost wages, pain — and negotiate from strength. Most cases settle here.</p></div>
+      <div class="step"><div class="num">Step Four</div><h3>Settle or Go to Trial</h3><p>If the insurance company won't be fair, we're ready for the courtroom. You make the final call, always.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rev">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">In Their Words</div>
+      <h2>What Our Clients Say</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rcard"><div class="stars">★★★★★</div><p>"Resolved everything in a reasonable and timely manner... Everyone from the front desk to the attorneys were extremely professional. Communication was top tier."</p><b>Google Review</b><small>Verified client</small></div>
+      <div class="rcard"><div class="stars">★★★★★</div><p>"They have gone far above and beyond anything I could have expected. Extremely knowledgeable and professional, but also genuinely compassionate."</p><b>Google Review</b><small>Verified client</small></div>
+      <div class="rcard"><div class="stars">★★★★★</div><p>"She really made us feel seen and heard, which isn't something I've encountered often in this field. A strong advocate."</p><b>Google Review</b><small>Verified client</small></div>
+    </div>
+    <div class="rev-foot"><a href="#" class="btn btn-line-d">Read All Reviews on Google</a></div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Where We Practice</div>
+      <h2>Serving Cook County and All of South Georgia</h2>
+      <p>Based on Parrish Avenue in Adel — representing injured people in 17 South Georgia counties, right where I-75 traffic meets hometown roads.</p>
+    </div>
+    <div class="wrap-grid" style="padding:0">
+      <ul>
+        <li><a href="#">Adel</a></li>
+        <li><a href="#">Cook County</a></li>
+        <li><a href="#">Valdosta &amp; Lowndes County</a></li>
+        <li><a href="#">Tifton &amp; Tift County</a></li>
+        <li><a href="#">Nashville &amp; Berrien County</a></li>
+        <li><a href="#">Moultrie &amp; Colquitt County</a></li>
+        <li><a href="#">Lakeland &amp; Lanier County</a></li>
+        <li><a href="#">Thomasville &amp; Thomas County</a></li>
+        <li><a href="#">Brooks County</a></li>
+        <li><a href="#">The I-75 Corridor</a></li>
+      </ul>
+      <div class="map ph">Service area map — South Georgia counties + I-75 corridor</div>
+    </div>
+    <div class="note">Hurt somewhere else in Georgia? Call anyway — we handle cases statewide and can often help.</div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Straight Answers</div>
+      <h2>Questions Injured People Ask Us</h2>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Do I even have a case?</summary><p>If someone else's carelessness caused your injury, you likely have a case — and the evaluation is free. Call or text (229) 896-4513, tell us what happened, and an Adel injury attorney will give you an honest answer the same day.</p></details>
+      <details><summary>What does it cost to hire you?</summary><p>Nothing up front. We work on contingency, which means we only get paid if you recover money. The consultation is free, we advance the case costs, and if we don't win, you owe us nothing.</p></details>
+      <details><summary>How long will my case take?</summary><p>Most injury cases in Cook County settle in six to twelve months. Serious cases that go to trial can take longer. We move as fast as your medical recovery allows — settling before you know your full damages costs you money.</p></details>
+      <details><summary>The insurance company already offered me money. Should I take it?</summary><p>Not before a lawyer looks at it. First offers are almost always a fraction of what the case is worth. Send us the offer — reviewing it is free, and you may be leaving serious money on the table.</p></details>
+      <details><summary>Will I have to go to court?</summary><p>Probably not. Most of our South Georgia cases settle out of court. But insurance companies pay more when they know your lawyer will actually try the case — and we do. Either way, you decide whether to settle.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="intake" id="evaluate">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Free Case Evaluation</div>
+      <h2>Tell Us What Happened</h2>
+      <p class="lead">Takes two minutes. An attorney — not a call center — reviews every submission and responds the same day.</p>
+      <div class="alt">
+        <b>Prefer to talk?</b>
+        <a href="tel:2298964513">(229) 896-4513</a>
+        <p>Call or text 24/7. After-hours calls are answered, not voicemailed.</p>
+      </div>
+      <div class="alt">
+        <b>Office</b>
+        <p style="color:#3D4046;font-size:15px">309 N. Parrish Avenue<br>Adel, GA 31620<br>Mon–Fri 8:00am–5:00pm</p>
+      </div>
+    </div>
+    <div class="iform">
+      <label for="f-name">Your name</label>
+      <input id="f-name" type="text" placeholder="First and last name">
+      <label for="f-phone">Phone</label>
+      <input id="f-phone" type="tel" placeholder="Best number to reach you">
+      <label for="f-type">What kind of accident?</label>
+      <select id="f-type"><option>Car accident</option><option>Truck / 18-wheeler</option><option>Motorcycle</option><option>Slip or fall</option><option>Work injury</option><option>Wrongful death</option><option>Something else</option></select>
+      <label for="f-desc">What happened? (a sentence or two is fine)</label>
+      <textarea id="f-desc" placeholder="When it happened, where, and how you were hurt"></textarea>
+      <button class="btn btn-gold" type="button">Get My Free Case Review</button>
+      <div class="priv">Confidential. Reviewed by an attorney. Submitting doesn't create an attorney-client relationship.</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Focus on Healing. <em>We'll Handle the Fight.</em></h2>
+      <p>Free case review · No fee unless we win · Adel, Georgia</p>
+    </div>
+    <div class="btns">
+      <a href="tel:2298964513" class="btn btn-gold">Call (229) 896-4513</a>
+      <a href="sms:2292695800" class="btn btn-line">Text Us</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo"><div class="mark">C</div><div><b>Carter, Carter &amp; Carter</b><small>Attorneys at Law · Adel, GA</small></div></div>
+        <p>A hometown Adel firm with 50+ years of combined experience — three generations of Carters serving injured people across Cook County and South Georgia.</p>
+      </div>
+      <div><h4>Practice Areas</h4><a href="#">Car Accidents</a><a href="#">Truck Accidents</a><a href="#">Motorcycle Accidents</a><a href="#">Slip &amp; Fall</a><a href="#">Wrongful Death</a><a href="#">Workers' Comp</a></div>
+      <div><h4>Areas Served</h4><a href="#">Adel</a><a href="#">Valdosta</a><a href="#">Tifton</a><a href="#">Cook County</a><a href="#">All 17 Counties</a></div>
+      <div><h4>Contact</h4><p>(229) 896-4513</p><p>Call or text 24/7</p><p>309 N. Parrish Ave, Adel, GA</p><a href="#">Google Business Profile</a></div>
+    </div>
+    <div class="f-disc">Attorney advertising. Prior results do not guarantee a similar outcome. This website is for general information only and does not constitute legal advice. Contacting the firm does not create an attorney-client relationship. Frank H. Carter, responsible attorney, Georgia Bar No. 574042.</div>
+    <div class="f-bottom">
+      <div>© 2026 Carter, Carter &amp; Carter LLC · Adel, Georgia</div>
+      <div>Licensed in Georgia · Free Consultations · (229) 896-4513</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
