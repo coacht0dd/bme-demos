@@ -66,6 +66,7 @@
 
   /* Ticker */
   .ticker{background:var(--white);border-bottom:1px solid var(--line);overflow:hidden}
+  .ticker:hover .ticker-track{animation-play-state:paused}
   .ticker-track{display:flex;white-space:nowrap;padding:14px 0;animation:tick 40s linear infinite;font-family:'Archivo Expanded';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--ink)}
   .ticker-track span i{font-style:normal;margin-right:64px}
   .ticker-track span i::after{content:"·";color:var(--red);margin-left:64px}
@@ -82,11 +83,14 @@
   /* Services */
   .svc-sec{background:var(--silver)}
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .svc{background:var(--white);padding:32px 28px;border-top:4px solid var(--black);transition:border-color .15s, transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.05)}
-  .svc:hover{border-top-color:var(--red);transform:translateY(-3px)}
+  .svc{background:var(--white);padding:32px 28px;border-top:4px solid var(--black);box-shadow:0 1px 2px rgba(0,0,0,.05);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background-color .18s ease}
+  .svc h3,.svc p{transition:color .18s ease}
+  .svc:hover{background:var(--red);border-top-color:var(--red);transform:translateY(-4px);box-shadow:0 16px 34px rgba(214,25,60,.28)}
+  .svc:hover h3,.svc:hover p{color:#fff}
   .svc h3{font-size:18px;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.01em}
   .svc p{color:var(--muted);font-size:14.5px}
-  .svc a{color:var(--red);text-decoration:none;font-weight:700;font-size:12.5px;display:inline-block;margin-top:16px;text-transform:uppercase;letter-spacing:.1em}
+  .svc a{color:var(--red);text-decoration:none;font-weight:700;font-size:12.5px;display:inline-block;margin-top:16px;text-transform:uppercase;letter-spacing:.1em;transition:color .18s ease,transform .18s ease}
+  .svc:hover a{color:#fff;transform:translateX(4px)}
   .svc a:hover{text-decoration:underline;text-underline-offset:4px}
 
   /* Story */
@@ -123,7 +127,8 @@
   /* Reviews */
   .rev{background:var(--silver)}
   .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .rcard{background:var(--white);padding:30px 28px;box-shadow:0 1px 2px rgba(0,0,0,.05);position:relative}
+  .rcard{background:var(--white);padding:30px 28px;box-shadow:0 1px 2px rgba(0,0,0,.05);position:relative;transition:transform .18s ease,box-shadow .18s ease}
+  .rcard:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,0,0,.09)}
   .rcard::before{content:"";position:absolute;top:0;left:0;width:44px;height:4px;background:var(--red)}
   .stars{color:var(--red);letter-spacing:3px;font-size:14px;margin-bottom:14px}
   .rcard p{color:#3B3B39;font-size:15px}
@@ -133,7 +138,8 @@
 
   /* Plans */
   .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .plan{border:1px solid var(--line);background:var(--white);padding:32px 28px;display:flex;flex-direction:column}
+  .plan{border:1px solid var(--line);background:var(--white);padding:32px 28px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  @media(min-width:921px){.plan:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(0,0,0,.12)}}
   .plan.fea{border:2px solid var(--black);position:relative}
   .plan.fea::before{content:"Most Popular";position:absolute;top:-13px;left:28px;background:var(--red);color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:11px;padding:5px 12px}
   .plan h3{font-size:17px;text-transform:uppercase;font-weight:800}
@@ -176,7 +182,8 @@
   /* Blog */
   .blog{background:var(--silver)}
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .bcard{background:var(--white);box-shadow:0 1px 2px rgba(0,0,0,.05);text-decoration:none;color:var(--ink);display:block}
+  .bcard{background:var(--white);box-shadow:0 1px 2px rgba(0,0,0,.05);text-decoration:none;color:var(--ink);display:block;transition:transform .18s ease,box-shadow .18s ease}
+  .bcard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.10)}
   .bcard .ph.lt{height:180px}
   .bcard .bd{padding:22px 24px 26px}
   .bcard small{color:var(--red);text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:11px}
@@ -220,6 +227,8 @@
   .f-logo .chip{background:#fff;border-radius:10px;padding:6px 8px;display:inline-flex}
   .f-logo .chip img{height:46px;width:auto;display:block}
   @media(max-width:920px){.story .imgcol .realimg{height:340px}}
+  .svc:focus-visible,.rcard:focus-visible,.bcard:focus-visible,.plan:focus-visible,.area li a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+  @media(prefers-reduced-motion:reduce){.svc:hover,.rcard:hover,.plan:hover,.bcard:hover{transform:none}}
 </style>
 </head>
 <body>
