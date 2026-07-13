@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vital Inspections Plus — NRVIA Certified RV Inspector, Burlington &amp; Southeast Wisconsin</title>
+<meta name="description" content="Vital Inspections Plus is Southeast Wisconsin's NRVIA Certified RV Inspector. Pre-purchase, pre-delivery, maintenance, and repair — Burlington, Lake Geneva, Kenosha, Racine &amp; beyond.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Expanded:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0D1B2A; --char:#132030; --char2:#1A2A3A;
+    --green:#1A6B3C; --green-d:#145530;
+    --silver:#F2F4F2; --silver-d:#E4E8E4; --white:#FFFFFF;
+    --ink:#0D1B2A; --muted:#5A6472; --line:#DCDFE0; --dline:rgba(255,255,255,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Archivo',sans-serif;background:var(--white);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-family:'Archivo Expanded','Archivo',sans-serif}
+  .ph{background:repeating-linear-gradient(45deg,#242424,#242424 16px,#1C1C1C 16px,#1C1C1C 32px);display:flex;align-items:center;justify-content:center;color:#8A8A87;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-align:center;padding:14px}
+  .ph.lt{background:repeating-linear-gradient(45deg,#E8E8E5,#E8E8E5 16px,#DFDFDC 16px,#DFDFDC 32px);color:#8A8A87}
+
+  .btn{display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;padding:15px 26px;text-decoration:none;transition:all .15s}
+  .btn-grn{background:var(--green);color:#fff}
+  .btn-grn:hover{background:var(--green-d)}
+  .btn-blk{background:var(--black);color:#fff}
+  .btn-blk:hover{background:#000}
+  .btn-line{border:2px solid #fff;color:#fff}
+  .btn-line:hover{background:#fff;color:var(--black)}
+  .btn-line-d{border:2px solid var(--black);color:var(--black)}
+  .btn-line-d:hover{background:var(--black);color:#fff}
+  .btnrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+
+  /* Topbar + header */
+  .topbar{background:var(--green);color:#fff;font-weight:600;font-size:13.5px;text-align:center;padding:8px 12px;letter-spacing:.02em}
+  .topbar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  header{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);z-index:50;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+  .logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+  .logo img{height:52px;width:auto;display:block}
+  .logo b{font-family:'Archivo Expanded';font-size:17px;text-transform:uppercase;line-height:1.05;display:block;letter-spacing:-.01em}
+  .logo small{color:var(--muted);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  nav ul{display:flex;gap:28px;list-style:none;font-weight:600;font-size:14px}
+  nav a{color:var(--ink);text-decoration:none}
+  nav a:hover{color:var(--green)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .nav-phone{font-family:'Archivo Expanded';font-weight:700;font-size:16px;color:var(--black);text-decoration:none}
+  .nav-phone:hover{color:var(--green)}
+
+  /* Hero */
+  .hero{background:var(--black);color:#fff;position:relative;overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,27,42,.85) 0%,rgba(13,27,42,.60) 44%,rgba(13,27,42,.18) 100%)}
+  .hero .inner{position:relative;z-index:2;padding:110px 0 120px;max-width:660px}
+  .kick{font-weight:700;color:#fff;letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+  .kick::before{content:"";width:34px;height:3px;background:var(--green)}
+  .hero h1{font-size:62px;font-weight:800;line-height:1.0;letter-spacing:-.015em;text-transform:uppercase;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+  .hero h1 em{font-style:normal;color:#4DC97E}
+  .hero p{margin:22px 0 34px;font-size:18.5px;color:#EDEDEA;max-width:520px;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-strip{position:relative;z-index:2;border-top:1px solid var(--dline);background:rgba(13,27,42,.65);backdrop-filter:blur(4px)}
+  .hero-strip .wrap{display:flex;justify-content:space-between;gap:20px;padding:18px 32px;flex-wrap:wrap}
+  .hero-strip .t{display:flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+  .hero-strip .t i{width:9px;height:9px;background:var(--green);font-style:normal;flex:0 0 auto}
+
+  /* Ticker */
+  .ticker{background:var(--white);border-bottom:1px solid var(--line);overflow:hidden}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  .ticker-track{display:flex;white-space:nowrap;padding:14px 0;animation:tick 44s linear infinite;font-family:'Archivo Expanded';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--ink)}
+  .ticker-track span i{font-style:normal;margin-right:64px}
+  .ticker-track span i::after{content:"·";color:var(--green);margin-left:64px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+  section{padding:96px 0}
+  .sec-head{max-width:680px;margin-bottom:52px}
+  .eyebrow{font-weight:700;color:var(--green);letter-spacing:.2em;text-transform:uppercase;font-size:12px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:30px;height:3px;background:var(--green)}
+  .sec-head h2{font-size:40px;font-weight:800;line-height:1.04;letter-spacing:-.01em;text-transform:uppercase;color:var(--black)}
+  .sec-head p{color:var(--muted);font-size:16.5px;margin-top:14px}
+
+  /* Services */
+  .svc-sec{background:var(--silver)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{background:var(--white);padding:32px 28px;border-top:4px solid var(--black);box-shadow:0 1px 2px rgba(0,0,0,.05);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background-color .18s ease}
+  .svc h3,.svc p,.svc a{transition:color .18s ease}
+  .svc:hover{background:var(--green);border-top-color:var(--green);transform:translateY(-4px);box-shadow:0 16px 34px rgba(26,107,60,.28)}
+  .svc:hover h3,.svc:hover p{color:#fff}
+  .svc h3{font-size:18px;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.01em}
+  .svc p{color:var(--muted);font-size:14.5px}
+  .svc a{color:var(--green);text-decoration:none;font-weight:700;font-size:12.5px;display:inline-block;margin-top:16px;text-transform:uppercase;letter-spacing:.1em;transition:color .18s ease,transform .18s ease}
+  .svc:hover a{color:#fff;transform:translateX(4px)}
+  .svc a:hover{text-decoration:underline;text-underline-offset:4px}
+
+  /* Story */
+  .story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+  .story .imgcol{position:relative}
+  .story .imgcol img{width:100%;height:500px;object-fit:cover;display:block}
+  .story .imgcol .ph{height:500px}
+  .story .imgcol .flag{position:absolute;left:-1px;bottom:32px;background:var(--green);color:#fff;padding:16px 22px;max-width:280px}
+  .story .imgcol .flag b{font-family:'Archivo Expanded';text-transform:uppercase;font-size:15px;display:block;line-height:1.2}
+  .story .imgcol .flag small{font-size:12.5px;opacity:.85}
+  .story h2{font-size:38px;font-weight:800;line-height:1.05;text-transform:uppercase;color:var(--black);letter-spacing:-.01em}
+  .story p{margin:16px 0;font-size:16px;color:#3B3B39;max-width:520px}
+  .story .creds{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border:1px solid var(--line)}
+  .story .cred{padding:16px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .story .cred:nth-child(2n){border-right:0}
+  .story .cred:nth-child(3),.story .cred:nth-child(4){border-bottom:0}
+  .story .cred b{font-family:'Archivo Expanded';text-transform:uppercase;font-size:13.5px;color:var(--black);display:block;line-height:1.2}
+  .story .cred small{color:var(--muted);font-size:12.5px}
+
+  /* Area */
+  .area{background:var(--black);color:#fff}
+  .area .sec-head h2{color:#fff}
+  .area .sec-head p{color:#B9BFC6}
+  .area .wrap-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+  .area ul{list-style:none;columns:2;column-gap:24px;margin-top:4px}
+  .area li{break-inside:avoid;border-bottom:1px solid var(--dline)}
+  .area li a{color:#DADAD7;text-decoration:none;font-weight:600;font-size:15px;display:flex;justify-content:space-between;padding:13px 2px}
+  .area li a:hover{color:#fff}
+  .area li a::after{content:"→";color:#4DC97E}
+  .area .note{margin-top:22px;color:#8A8A87;font-size:14px}
+  .area .map{height:440px;position:relative;overflow:hidden}
+  .area .map img{width:100%;height:100%;object-fit:cover;display:block;border:1px solid var(--dline)}
+
+  /* Reviews */
+  .rev{background:var(--silver)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rcard{background:var(--white);padding:30px 28px;box-shadow:0 1px 2px rgba(0,0,0,.05);position:relative;transition:transform .18s ease,box-shadow .18s ease}
+  .rcard:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,0,0,.09)}
+  .rcard::before{content:"";position:absolute;top:0;left:0;width:44px;height:4px;background:var(--green)}
+  .stars{color:var(--green);letter-spacing:3px;font-size:14px;margin-bottom:14px}
+  .rcard p{color:#3B3B39;font-size:15px}
+  .rcard b{display:block;margin-top:18px;font-family:'Archivo Expanded';text-transform:uppercase;font-size:13.5px;letter-spacing:.04em}
+  .rcard small{color:var(--muted);font-size:12.5px}
+  .rev-foot{text-align:center;margin-top:38px}
+
+  /* Plans */
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .plan{border:1px solid var(--line);background:var(--white);padding:32px 28px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  @media(min-width:921px){.plan:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(0,0,0,.12)}}
+  .plan.fea{border:2px solid var(--black);position:relative}
+  .plan.fea::before{content:"Most Popular";position:absolute;top:-13px;left:28px;background:var(--green);color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:11px;padding:5px 12px}
+  .plan h3{font-size:17px;text-transform:uppercase;font-weight:800}
+  .plan .price{font-family:'Archivo Expanded';font-weight:800;font-size:42px;color:var(--black);margin:12px 0 2px}
+  .plan .per{color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:18px;font-weight:600}
+  .plan ul{list-style:none;flex:1}
+  .plan li{padding:8px 0 8px 20px;position:relative;color:#3B3B39;font-size:14px;border-bottom:1px solid var(--line)}
+  .plan li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;background:var(--green)}
+  .plan .btn{margin-top:24px;text-align:center}
+
+  /* Orientation band */
+  .orient{background:var(--char);color:#fff;position:relative;overflow:hidden}
+  .orient .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .orient h2{font-size:36px;font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.01em}
+  .orient h2 em{font-style:normal;color:#4DC97E}
+  .orient p{color:#B9BFC6;margin:16px 0 28px;font-size:16px;max-width:500px}
+  .orient .ph{height:380px}
+  .orient ul{list-style:none;margin:0 0 30px}
+  .orient li{padding:9px 0 9px 22px;position:relative;color:#DADAD7;font-size:15px;border-bottom:1px solid var(--dline)}
+  .orient li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:8px;background:var(--green)}
+
+  /* Lead magnet */
+  .guide{background:var(--char);color:#fff}
+  .guide .wrap{display:grid;grid-template-columns:.55fr 1.45fr;gap:64px;align-items:center}
+  .guide .ph{height:380px;max-width:300px}
+  .guide h2{font-size:36px;font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.01em}
+  .guide h2 em{font-style:normal;color:#4DC97E}
+  .guide p{color:#B9BFC6;margin:16px 0 28px;font-size:16px;max-width:560px}
+
+  /* FAQ */
+  .faq-list{max-width:840px}
+  details{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:22px 4px;font-family:'Archivo Expanded';font-weight:700;font-size:16.5px;text-transform:uppercase;letter-spacing:.01em}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--green);font-size:26px;font-weight:700;font-family:'Archivo'}
+  details[open] summary::after{content:"−"}
+  details p{padding:0 4px 22px;color:var(--muted);max-width:680px;font-size:15px}
+
+  /* Blog */
+  .blog{background:var(--silver)}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .bcard{background:var(--white);box-shadow:0 1px 2px rgba(0,0,0,.05);text-decoration:none;color:var(--ink);display:block;transition:transform .18s ease,box-shadow .18s ease}
+  .bcard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.10)}
+  .bcard .ph.lt{height:180px}
+  .bcard .bd{padding:22px 24px 26px}
+  .bcard small{color:var(--green);text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:11px}
+  .bcard h3{font-size:17.5px;margin:10px 0 8px;line-height:1.2;font-weight:700}
+  .bcard p{color:var(--muted);font-size:13.5px}
+
+  /* CTA */
+  .cta-band{background:var(--green);color:#fff;padding:76px 0}
+  .cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .cta-band h2{font-size:42px;line-height:1.03;text-transform:uppercase;font-weight:800;letter-spacing:-.01em}
+  .cta-band p{font-weight:500;margin-top:8px;font-size:16px;opacity:.92}
+  .cta-band .btns{display:flex;gap:12px;flex-wrap:wrap}
+
+  footer{background:var(--black);color:#8A9099;padding:60px 0 30px}
+  .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .f-grid h4{font-family:'Archivo Expanded';text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:#fff;margin-bottom:16px}
+  .f-grid a,.f-grid p{color:#8A9099;text-decoration:none;font-size:14px;display:block;padding:4px 0}
+  .f-grid a:hover{color:#fff}
+  .f-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .f-logo .chip{background:#fff;border-radius:8px;padding:6px 10px;display:inline-flex}
+  .f-logo .chip img{height:44px;width:auto;display:block}
+  .f-bottom{border-top:1px solid var(--dline);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap;gap:10px}
+
+  @media(max-width:920px){
+    .hero h1{font-size:44px}
+    .hero .inner{padding:80px 0 90px}
+    .story .wrap,.area .wrap-grid,.orient .wrap{grid-template-columns:1fr}
+    .svc-grid,.rev-grid,.plans-grid,.blog-grid{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr 1fr}
+    nav ul{display:none}
+    .nav-phone{display:none}
+    .story .imgcol img,.story .imgcol .ph{height:340px}
+    .sec-head h2{font-size:30px}
+    .guide .wrap{grid-template-columns:1fr}
+  }
+  .svc:focus-visible,.rcard:focus-visible,.bcard:focus-visible,.plan:focus-visible,.area li a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+  @media(prefers-reduced-motion:reduce){.svc:hover,.rcard:hover,.plan:hover,.bcard:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Buying or selling an RV in SE Wisconsin? Call or text <a href="tel:2623320395">(262) 332-0395</a> — 5.0★ certified inspections, Burlington &amp; beyond</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <img src="https://www.vitalhomeinspections.com/wp-content/uploads/sites/366/2022/10/Vital-Logo.png" alt="Vital Inspections Plus logo">
+      <div><b>Vital Inspections Plus</b><small>NRVIA Certified RV Inspector</small></div>
+    </a>
+    <nav><ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#blog">RV Tips</a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <a href="tel:2623320395" class="nav-phone">(262) 332-0395</a>
+      <a href="https://www.vitalhomeinspections.com/request-inspection/" class="btn btn-grn">Book Inspection</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="bg">
+    <img src="https://www.vitalhomeinspections.com/wp-content/uploads/sites/366/2022/10/RV-Image-2.jpg" alt="Class A motorhome RV inspection">
+  </div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="kick">NRVIA Certified · RVTAA Certified · 5.0★ on Google</div>
+      <h1>Buy With Confidence.<br><em>We Inspect Every Inch.</em></h1>
+      <p>Certified RV inspections before you buy, before you sell, or before you head out — at the dealership, storage lot, or anywhere in Southeast Wisconsin. No guesswork. No surprises.</p>
+      <div class="hero-ctas">
+        <a href="https://www.vitalhomeinspections.com/request-inspection/" class="btn btn-grn">Book Your Inspection</a>
+        <a href="sms:2623320395" class="btn btn-line">Text Us Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="wrap">
+      <div class="t"><i></i>NRVIA Certified Inspector</div>
+      <div class="t"><i></i>100+ Point Inspection</div>
+      <div class="t"><i></i>Report Within 24 Hours</div>
+      <div class="t"><i></i>154 Five-Star Reviews</div>
+    </div>
+  </div>
+</div>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span><i>Burlington</i><i>Lake Geneva</i><i>Twin Lakes</i><i>Delavan</i><i>East Troy</i><i>Salem</i><i>Elkhorn</i><i>Kenosha</i><i>Racine</i><i>Waterford</i><i>Oak Creek</i><i>Franklin</i></span>
+    <span><i>Burlington</i><i>Lake Geneva</i><i>Twin Lakes</i><i>Delavan</i><i>East Troy</i><i>Salem</i><i>Elkhorn</i><i>Kenosha</i><i>Racine</i><i>Waterford</i><i>Oak Creek</i><i>Franklin</i></span>
+  </div>
+</div>
+
+<section class="svc-sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What We Inspect &amp; Fix</div>
+      <h2>RV Inspection &amp; Service, Done Right</h2>
+      <p>Every inspection follows NRVIA's Standards of Practice — 100+ components checked, photographed, and explained in plain English. Class A, B, C, Super C, fifth wheels, and towables.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <h3>Pre-Purchase Inspection</h3>
+        <p>Buying used? A bad RV can ruin your season and drain your savings. We inspect it before you sign — catching the issues the dealer won't mention and the seller doesn't know about.</p>
+        <a href="#">Service Details →</a>
+      </div>
+      <div class="svc">
+        <h3>Pre-Delivery Inspection</h3>
+        <p>Even new RVs roll off the lot with damage and defects. Our PDI checks every system, every seal, every surface — so you know exactly what you're getting before you drive away.</p>
+        <a href="#">Service Details →</a>
+      </div>
+      <div class="svc">
+        <h3>Seller's Pre-Listing</h3>
+        <p>Know your RV's real condition before you list it. We help you price it accurately, address issues upfront, and build buyer trust — so your listing moves faster and at a stronger price.</p>
+        <a href="#">Service Details →</a>
+      </div>
+      <div class="svc">
+        <h3>Walk-Through &amp; Orientation</h3>
+        <p>New to RVing? We teach you how your systems work, what to watch for, and how to handle problems on the road — so you leave with the confidence to actually use your rig.</p>
+        <a href="#">Service Details →</a>
+      </div>
+      <div class="svc">
+        <h3>Maintenance &amp; Seasonal</h3>
+        <p>Monthly, seasonal, and annual maintenance inspections — plus winterizing and de-winterizing. We catch small issues before Wisconsin winters turn them into big repair bills.</p>
+        <a href="#">Service Details →</a>
+      </div>
+      <div class="svc">
+        <h3>RV Repairs &amp; Fluid Analysis</h3>
+        <p>Heating, cooling, plumbing, electrical, water heaters — plus certified fluid analysis for engine oil, coolant, transmission, and generator systems. One call handles it all.</p>
+        <a href="#">Service Details →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="about">
+  <div class="wrap">
+    <div class="imgcol">
+      <img src="https://www.vitalhomeinspections.com/wp-content/uploads/sites/366/2022/10/Rv-Image-6.jpg" alt="RV inspection in Wisconsin">
+      <div class="flag"><b>Certified Since 2009</b><small>1,500+ inspections completed in SE Wisconsin</small></div>
+    </div>
+    <div>
+      <div class="eyebrow">The Inspector Behind The Report</div>
+      <h2>Inspections Are What We Do. Honesty Is Who We Are.</h2>
+      <p>Vital Inspections Plus is owned and operated by Lee Verhagen, a master-certified inspector who has spent 15+ years learning everything there is to know about what makes a property — or an RV — safe, sound, and worth your money.</p>
+      <p>Lee doesn't rush. He doesn't skip things. He explains what he finds in plain English, answers every question, and stays reachable after the report is in your hands. He came to RV inspections the same way he came to home inspections — a lifelong fascination with how things work and a belief that buyers deserve honest answers, not a glossed-over handshake.</p>
+      <div class="creds">
+        <div class="cred"><b>NRVIA Certified</b><small>National RV Inspectors Association</small></div>
+        <div class="cred"><b>RVTAA Certified</b><small>RV Technicians Association of America</small></div>
+        <div class="cred"><b>InterNACHI Master</b><small>Certified Master Inspector</small></div>
+        <div class="cred"><b>WI Licensed</b><small>Home Inspector #2290-106</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Where We Work</div>
+      <h2>We Cover Southeast Wisconsin</h2>
+      <p>Based in Burlington — serving dealerships, storage lots, driveways, and campgrounds across Racine, Kenosha, Walworth, and Waukesha counties. And beyond for the right job.</p>
+    </div>
+    <div class="wrap-grid" style="padding:0">
+      <ul>
+        <li><a href="#">Burlington</a></li>
+        <li><a href="#">Lake Geneva</a></li>
+        <li><a href="#">Twin Lakes</a></li>
+        <li><a href="#">Delavan</a></li>
+        <li><a href="#">East Troy</a></li>
+        <li><a href="#">Salem &amp; Paddock Lake</a></li>
+        <li><a href="#">Elkhorn</a></li>
+        <li><a href="#">Kenosha</a></li>
+        <li><a href="#">Racine</a></li>
+        <li><a href="#">Waterford</a></li>
+        <li><a href="#">Oak Creek</a></li>
+        <li><a href="#">Franklin</a></li>
+      </ul>
+      <div class="map">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=42.6964909,-88.246567&zoom=8&size=640x440&scale=2&maptype=roadmap&markers=color:0x1A6B3C%7Clabel:V%7C42.6964909,-88.246567&key=AIzaSyAgc5yFo119t9mdY8aQBxObRquepcoRMEE" alt="Vital Inspections Plus service area — Southeast Wisconsin">
+      </div>
+    </div>
+    <div class="note">Outside these areas? Call — referred clients outside the service area are accommodated upon request.</div>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">5.0★ on Google · 154 Reviews</div>
+      <h2>What RV Buyers Say About Lee</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rcard">
+        <div class="stars">★★★★★</div>
+        <p>"Lee Verhagen was a pleasure to work with. He explained every step of the process and outlined the expectations on the RV Inspection. He was very thorough and fast to respond to any questions I had. I highly recommend him for an RV inspection!"</p>
+        <b>Teresa B.</b>
+        <small>Southeast Wisconsin · 1 month ago</small>
+      </div>
+      <div class="rcard">
+        <div class="stars">★★★★★</div>
+        <p>"Lee was very professional and knowledgeable about the camper and all of its processes. His report was very detailed and we enjoyed the entire experience. Since he was able to diagnose a couple issues, we felt very comfortable paying for Lee's services."</p>
+        <b>Troy B.</b>
+        <small>Southeast Wisconsin · 2 months ago</small>
+      </div>
+      <div class="rcard">
+        <div class="stars">★★★★★</div>
+        <p>"We've always been tent campers — Lee was quick to respond, fit us in his schedule, and helped with everything we needed. He fixed our stove, sorted out the propane, and showed us how to start the water heater. Very positive experience!"</p>
+        <b>Emily S.</b>
+        <small>Burlington, WI · 3 years ago</small>
+      </div>
+    </div>
+    <div class="rev-foot"><a href="https://maps.google.com/?cid=6789974874181211940" class="btn btn-line-d" target="_blank">Read All 154 Reviews On Google</a></div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Stay Road-Ready All Year</div>
+      <h2>Maintenance Plans That Prevent Surprises</h2>
+      <p>RV problems compound. A missed seal becomes a water-damaged wall. A skipped fluid check becomes a side-of-the-road breakdown. Our plans keep your rig healthy — and your repair bills small.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan">
+        <h3>Seasonal Check</h3>
+        <div class="price">$—</div>
+        <div class="per">Per Visit</div>
+        <ul>
+          <li>Spring or fall multi-point inspection</li>
+          <li>Roof &amp; seal inspection</li>
+          <li>All systems tested — power, water, propane</li>
+          <li>Written condition report with photos</li>
+        </ul>
+        <a href="https://www.vitalhomeinspections.com/request-inspection/" class="btn btn-line-d">Choose Plan</a>
+      </div>
+      <div class="plan fea">
+        <h3>Annual Care Plan</h3>
+        <div class="price">$—</div>
+        <div class="per">Per Year</div>
+        <ul>
+          <li>Two full inspections per year</li>
+          <li>Winterization + de-winterization</li>
+          <li>Priority scheduling</li>
+          <li>Discounted repair labor</li>
+        </ul>
+        <a href="https://www.vitalhomeinspections.com/request-inspection/" class="btn btn-grn">Choose Plan</a>
+      </div>
+      <div class="plan">
+        <h3>Full-Timer Plan</h3>
+        <div class="price">$—</div>
+        <div class="per">Per Year</div>
+        <ul>
+          <li>Quarterly inspections</li>
+          <li>Same-week priority response</li>
+          <li>Fluid analysis included</li>
+          <li>Direct line to Lee</li>
+        </ul>
+        <a href="https://www.vitalhomeinspections.com/request-inspection/" class="btn btn-line-d">Choose Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="orient" id="orientation">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">New To RVing?</div>
+      <h2>RV Walk-Through — <em>Know Your Rig</em></h2>
+      <p>Most new RV owners don't know what half the switches do. Our walk-through/orientation puts you in control before you ever leave the lot — fewer panicked calls on the road, more confidence at the campsite.</p>
+      <ul>
+        <li>How every system works — water, power, propane, HVAC</li>
+        <li>What to check before every trip</li>
+        <li>What to do (and not do) when something goes wrong</li>
+      </ul>
+      <a href="https://www.vitalhomeinspections.com/request-inspection/" class="btn btn-grn">Book a Walk-Through</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1596470692137-ead1053a1e5c?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="RV inspector reviewing systems with new owner" style="width:100%;height:380px;object-fit:cover;display:block;">
+  </div>
+</section>
+
+<section class="guide" id="free-guide">
+  <div class="wrap">
+    <img src="https://images.unsplash.com/photo-1596470692500-66cbc5daea08?fm=jpg&q=75&w=560&auto=format&fit=crop" alt="Couple reviewing RV inspection checklist" style="width:100%;max-width:280px;height:380px;object-fit:cover;display:block;">
+    <div>
+      <div class="eyebrow">Free Download — No Email Required</div>
+      <h2>Free: <em>The Wisconsin RV Buyer's Checklist</em></h2>
+      <p>A certified inspector's honest pre-purchase checklist — the 20 things every Wisconsin buyer should check before handing over a dime. Bring it to your next RV walkthrough and never get burned by a bad deal again.</p>
+      <div class="btnrow">
+        <a class="btn btn-grn" href="#" download>Download the Free Checklist (PDF)</a>
+        <a class="btn btn-line" href="#">RV Inspection Hub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Straight Answers</div>
+      <h2>Questions RV Buyers Ask Us</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Do you inspect RVs at the dealership or seller's location?</summary>
+        <p>Yes. Vital Inspections Plus travels to wherever your RV is located — the dealership, a private seller's property, a storage lot, or a campground anywhere in Southeast Wisconsin. Call or text (262) 332-0395 and we'll confirm your location works.</p>
+      </details>
+      <details>
+        <summary>What types of RVs do you inspect?</summary>
+        <p>We inspect all motorized and towable RV styles: Class A, B, C, and Super C motorhomes, fifth wheels, toy haulers, and travel trailers — new or used. NRVIA's Standards of Practice cover 100+ inspection points on every rig.</p>
+      </details>
+      <details>
+        <summary>How soon can I get a report after the inspection?</summary>
+        <p>Your detailed inspection report — with photos and plain-English explanations — is delivered within 24 hours of the completed inspection. Lee stays available by phone to walk you through anything in the report.</p>
+      </details>
+      <details>
+        <summary>Is it worth inspecting a new RV from a dealer?</summary>
+        <p>Absolutely. New RVs frequently leave the factory with defects, water intrusion, and improperly installed systems. A pre-delivery inspection is how you make the dealer fix issues before you take possession — not after you've driven it home.</p>
+      </details>
+      <details>
+        <summary>Do you serve areas outside Burlington, WI?</summary>
+        <p>Yes. Our primary service area covers Burlington, Lake Geneva, Kenosha, Racine, Delavan, Elkhorn, Twin Lakes, and surrounding Walworth, Racine, and Kenosha counties. For referred clients outside the area, call (262) 332-0395 to discuss accommodations.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">From The Field</div>
+      <h2>RV Tips That Save You Money</h2>
+      <p>Honest maintenance and buying advice from a certified inspector — content that keeps this site working as hard as Lee does.</p>
+    </div>
+    <div class="blog-grid">
+      <a class="bcard" href="#">
+        <img src="https://images.unsplash.com/photo-1596470689657-bcfc0e24f4e0?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="RV trailer being inspected" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="bd">
+          <small>Buying Guide</small>
+          <h3>5 Red Flags Every Wisconsin RV Buyer Should Know Before Signing</h3>
+          <p>A certified inspector's field guide to the issues that cost buyers thousands after the handshake.</p>
+        </div>
+      </a>
+      <a class="bcard" href="#">
+        <img src="https://images.unsplash.com/photo-1629222247196-d38d47441a1b?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="White RV travel trailer parked in green field" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="bd">
+          <small>Seasonal</small>
+          <h3>How Wisconsin Winters Destroy RVs — And How to Stop It</h3>
+          <p>What happens inside an improperly winterized RV and why de-winterizing right matters just as much.</p>
+        </div>
+      </a>
+      <a class="bcard" href="#">
+        <img src="https://images.unsplash.com/photo-1693975524886-2938d6a71905?fm=jpg&q=70&w=600&auto=format&fit=crop" alt="Camper interior with desk and seating area" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div class="bd">
+          <small>New Owners</small>
+          <h3>Your RV's First 30 Days: What To Check, Test, and Learn</h3>
+          <p>The orientation checklist new RV owners wish they'd had before their first trip to Door County.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band" id="book">
+  <div class="wrap">
+    <div>
+      <h2>Ready To Buy With Confidence?<br>Let's Inspect It First.</h2>
+      <p>Call, text, or book online — we travel to you anywhere in Southeast Wisconsin.</p>
+    </div>
+    <div class="btns">
+      <a href="tel:2623320395" class="btn btn-blk">Call (262) 332-0395</a>
+      <a href="https://www.vitalhomeinspections.com/request-inspection/" class="btn btn-line">Book Inspection</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo">
+          <div class="chip"><img src="https://www.vitalhomeinspections.com/wp-content/uploads/sites/366/2022/10/Vital-Logo.png" alt="Vital Inspections Plus"></div>
+        </div>
+        <p>NRVIA Certified RV Inspector serving Southeast Wisconsin since 2009. Owner-operated by Lee Verhagen — 1,500+ inspections, 5.0★ on Google.</p>
+      </div>
+      <div>
+        <h4>RV Services</h4>
+        <a href="#">Pre-Purchase Inspection</a>
+        <a href="#">Pre-Delivery Inspection</a>
+        <a href="#">Seller's Pre-Listing</a>
+        <a href="#">Walk-Through &amp; Orientation</a>
+        <a href="#">Maintenance Plans</a>
+        <a href="#">RV Repairs</a>
+      </div>
+      <div>
+        <h4>Service Area</h4>
+        <a href="#">Burlington</a>
+        <a href="#">Lake Geneva</a>
+        <a href="#">Kenosha</a>
+        <a href="#">Racine</a>
+        <a href="#">Delavan</a>
+        <a href="#">All Locations</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>(262) 332-0395</p>
+        <p>Call or text anytime</p>
+        <p>Burlington, WI 53105</p>
+        <p>Mon–Thu 8am–7pm</p>
+        <p>Fri 8am–5pm · Sat 9am–12pm</p>
+        <a href="https://maps.google.com/?cid=6789974874181211940" target="_blank">Google Business Profile →</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <div>© 2026 Vital Inspections Plus · Burlington, Wisconsin</div>
+      <div>NRVIA Certified · RVTAA Certified · InterNACHI Master · WI License #2290-106</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
