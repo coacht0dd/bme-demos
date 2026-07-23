@@ -1,5 +1,5 @@
 # Triumphant RV Solutions — Demo Build Status
-Updated: July 3, 2026 · Session: full demo build (archived chat)
+Updated: July 22, 2026 · Session: full demo build (archived chat)
 Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's — production port pending)
 
 ## STATUS: STAGE 6 SIGNED OFF (Todd, Jul 3 2026). Next: James review → production port.
@@ -29,6 +29,8 @@ Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's 
 
 - SERVICE PAGE PHOTOS (Jul 3, image pass): water-heaters = real GBP anode-rod + heating-element wear photos w/ captions (svc-anode-rods.jpg, svc-heating-elements.jpg — Todd IDed g1/g3 from GBP); electrical = Todd-approved generated multimeter/converter shot (svc-electrical.jpg); slide-outs-jacks = photo from live triumphantrv.com Wix media (svc-slideout.jpg). All placeholders on service pages cleared. Unused: Todd's generated water-heater + slideout images (real assets preferred). Hero/'technician at work' slots elsewhere unchanged.
 
+- REVIEW CTA (July 22): all 30 "review us" CTAs (29 footers + homepage "Review Us on Google" button) now point to the DIRECT write-a-review form: https://search.google.com/local/writereview?placeid=ChIJ8Zk_tu_x9YgRWpt2nXr2Ubo (opens the review box straight away; the old maps.app.goo.gl/vq51AQah7vWR6R267 link only opened the profile). JSON-LD sameAs still uses the PROFILE link on all 29 pages — correct, do NOT change it. CARRY BOTH URLs ACROSS AT PRODUCTION PORT.
+
 ## KEY DECISIONS
 - Demo is NOINDEXED (remove at production). Forms in demo mode (fake success; wire Formspree/CRM at launch)
 - Team voice sitewide ("we/our certified technicians"); James appears only About/reviews/TBF
@@ -45,4 +47,4 @@ Demo: coacht0dd.github.io/bme-demos/triumphant-rv/ · Todd's repo (NOT client's 
 7. Prefilled intake doc in Drive folder (1O4UrSktRKYpwMMyXF0XbJQ2hk5gZFWNz), doc id 1gPch9jX3Xd67aIngxyyixNaDzsX5tJewY50KUO1-DR8
 
 ## VERIFIED FACTS (do not re-research)
-(770) 519-2828 call+text · info@triumphantrv.com · 4131 Ashford Way Gainesville 30507 · est. 2025 · RVTAA+NRVTA · Navy vet · 5.0/5 Google (feature: Sigmon, Erath, Nottingham, Bowman) · Honors 10% · Bronze 5/Silver 10/Gold 15 · GBP place_id ChIJ8Zk_tu_x9YgRWpt2nXr2Ubo · rvhelp.com/providers/triumphant-rv-solutions-llc · Atlanta Dragway CLOSED · Commerce KOA → Commerce Station RV Resort
+(770) 519-2828 call+text · info@triumphantrv.com · 4131 Ashford Way Gainesville 30507 · est. 2025 · RVTAA+NRVTA · Navy vet · 5.0/5 Google (feature: Sigmon, Erath, Nottingham, Bowman) · Honors 10% · Bronze 5/Silver 10/Gold 15 · GBP place_id ChIJ8Zk_tu_x9YgRWpt2nXr2Ubo (CID 13425782970656398170) · write-review URL search.google.com/local/writereview?placeid=ChIJ8Zk_tu_x9YgRWpt2nXr2Ubo · profile URL maps.app.goo.gl/vq51AQah7vWR6R267 (schema sameAs only) · rvhelp.com/providers/triumphant-rv-solutions-llc · Atlanta Dragway CLOSED · Commerce KOA → Commerce Station RV Resort
