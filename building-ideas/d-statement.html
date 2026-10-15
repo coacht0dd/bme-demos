@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Building Ideas — Statement | Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E0E0E}
+a{color:#FFFFFF}a:hover{color:#F3B8BB}
+.page{font-family:'Manrope',system-ui,sans-serif;color:#FFFFFF;background:#0E0E0E;min-width:0}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.d{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.5px}
+.sec{padding:96px 0}
+.paper{background:#F2F0ED;color:#0E0E0E}
+.paper a{color:#B0212A}
+.white{background:#FFFFFF;color:#0E0E0E}
+.white a{color:#B0212A}
+.h2{margin:0;font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:72px;line-height:0.95}
+.lead{margin:0;font-size:18px;line-height:1.6;color:#CFCFCF}
+.paper .lead,.white .lead{color:#3B3B3B}
+.btn{display:inline-block;background:#B0212A;color:#FFFFFF;text-decoration:none;font-weight:800;padding:18px 28px;font-size:16px}
+.btn:hover{background:#8A1920;color:#FFFFFF}
+.btn2{display:inline-block;border:2px solid #FFFFFF;color:#FFFFFF;text-decoration:none;font-weight:800;padding:16px 26px;font-size:16px}
+.in{padding:14px;background:#1E1E1E;border:1px solid #4A4A4A;color:#FFFFFF;font-size:16px}
+.lab{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px}
+summary{cursor:pointer;font-weight:800;font-size:19px;padding:22px 0}
+input,select,textarea{font:inherit}
+</style>
+<script src="assets/dc-lite.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/x-template" id="dc-template">
+<div class="page">
+
+<div style="background: #B0212A; font-size: 14px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between">
+<span>{{t.topbar}} <a href="tel:+14047719004" style="font-weight: 800">{{t.callText}}</a></span>
+<div role="group" aria-label="Language" style="display: flex; border: 2px solid #FFFFFF">
+<button type="button" onClick="{{setEn}}" aria-pressed="{{isEn}}" style="{{enBtn}}">EN</button>
+<button type="button" onClick="{{setEs}}" aria-pressed="{{isEs}}" style="{{esBtn}}">ES</button>
+</div>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 20; background: #0E0E0E; border-bottom: 1px solid #2A2A2A">
+<div class="wrap" style="padding-top: 14px; padding-bottom: 14px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between">
+<a href="#top" aria-label="Building Ideas home" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<svg width="50" height="40" viewBox="0 0 100 80" aria-hidden="true"><path fill="#FFFFFF" fill-rule="evenodd" d="M0 80V52L34 30V20L64 0L100 22V80ZM10 56h8v18h-8ZM22 50h8v24h-8ZM42 24h10v50h-10ZM60 30h10v44h-10ZM78 34h10v40h-10Z"></path></svg>
+<span style="line-height: 0.95; font-weight: 800; font-size: 20px">Building<br>Ideas</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px 24px; font-weight: 700; font-size: 15px">
+<a href="#services" style="text-decoration: none">{{t.navServices}}</a>
+<a href="#work" style="text-decoration: none">{{t.navWork}}</a>
+<a href="#about" style="text-decoration: none">{{t.navAbout}}</a>
+<a href="#area" style="text-decoration: none">{{t.navArea}}</a>
+<a href="#contact" style="text-decoration: none">{{t.navContact}}</a>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+<a href="tel:+14047719004" style="font-weight: 800; text-decoration: none">404-771-9004</a>
+<a href="#contact" class="btn" style="padding: 14px 20px">{{t.ctaBook}}</a>
+</div>
+</div>
+</header>
+
+<section id="top" style="position: relative; overflow: hidden">
+<img src="images/stone-feature-wall.jpg" alt="Living room with a dark stacked-stone feature wall" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(14,14,14,0.66)"></div>
+<div class="wrap" style="position: relative; padding-top: 140px; padding-bottom: 88px; display: flex; flex-direction: column; gap: 28px">
+<h1 class="d" style="margin: 0; font-size: 132px; line-height: 0.9; max-width: 1180px">{{t.heroA}} <span style="color: #F07A80">{{t.heroB}}</span></h1>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: flex-end; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 600px"><p class="lead" style="font-size: 20px; color: #EDEDED">{{t.heroSub}}</p><p style="margin: 0; font-size: 15px; color: #CFCFCF">{{t.heroCred}}</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="tel:+14047719004" class="btn">{{t.ctaCall}}</a><a href="#contact" class="btn2">{{t.ctaBook}}</a></div>
+</div>
+</div>
+</section>
+
+<section aria-label="Why homeowners choose us" style="border-bottom: 1px solid #2A2A2A">
+<div class="wrap" style="padding-top: 36px; padding-bottom: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px">
+<sc-for list="{{t.trust}}" as="s" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 6px; border-left: 4px solid #B0212A; padding-left: 18px"><span class="d" style="font-size: 40px; line-height: 1">{{s.a}}</span><span style="font-size: 15px; color: #CFCFCF">{{s.b}}</span></div>
+</sc-for>
+</div>
+</section>
+
+<div aria-label="Areas we serve" style="background: #B0212A; overflow: hidden; white-space: nowrap">
+<div class="wrap d" style="padding-top: 16px; padding-bottom: 16px; display: flex; gap: 36px; font-size: 32px">
+<sc-for list="{{areas}}" as="a" hint-placeholder-count="6"><span>{{a}}</span></sc-for>
+</div>
+</div>
+
+<section id="services" class="sec paper">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<h2 class="h2" style="max-width: 980px">{{t.svcTitle}}</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<ul style="flex: 1 1 520px; min-width: 0; list-style: none; margin: 0; padding: 0; border-top: 3px solid #0E0E0E">
+<sc-for list="{{svcRows}}" as="s" hint-placeholder-count="6">
+<li style="border-bottom: 1px solid #C9C4BD">
+<button type="button" onClick="{{s.pick}}" aria-pressed="{{s.active}}" style="{{s.style}}">
+<span class="d" style="font-size: 24px; min-width: 48px">{{s.n}}</span>
+<span style="display: flex; flex-direction: column; gap: 6px; text-align: left"><span class="d" style="font-size: 30px; line-height: 1">{{s.title}}</span><span style="font-size: 15px; line-height: 1.5; font-weight: 500">{{s.body}}</span></span>
+</button>
+</li>
+</sc-for>
+</ul>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<img src="{{svc.img}}" alt="{{svc.title}}" style="width: 100%; height: 600px; object-fit: cover; display: block">
+<a href="#services" style="font-weight: 800">{{t.svcLink}}: {{svc.title}} →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="work" class="sec">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between"><h2 class="h2">{{t.workTitle}}</h2><a href="#work" style="font-weight: 800; border-bottom: 2px solid #B0212A; padding-bottom: 4px; text-decoration: none">{{t.workAll}} →</a></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px">
+<sc-for list="{{work}}" as="w" hint-placeholder-count="6">
+<a href="#work" style="position: relative; display: block; height: 400px; overflow: hidden; text-decoration: none">
+<img src="{{w.img}}" alt="{{w.name}}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<span style="position: absolute; left: 0; bottom: 0; right: 0; background: rgba(14,14,14,0.8); padding: 16px 18px; display: flex; justify-content: space-between; gap: 12px"><span class="d" style="font-size: 24px">{{w.name}}</span><span style="font-size: 14px; font-weight: 600; color: #E3E3E3; align-self: center">{{w.tag}}</span></span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="about" class="sec white">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<img src="images/crew-stone-fireplace.jpg" alt="Building Ideas crew installing a two-story stone fireplace" style="flex: 1 1 380px; min-width: 0; width: 100%; height: 600px; object-fit: cover; display: block">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h2 class="h2" style="font-size: 60px">{{t.aboutTitle}}</h2>
+<p class="lead">{{t.aboutBody}}</p>
+<p style="margin: 0; font-size: 16px; color: #B0212A; font-weight: 600">{{t.aboutStory}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 24px">
+<sc-for list="{{t.team}}" as="m" hint-placeholder-count="4"><li style="border-top: 2px solid #0E0E0E; padding: 12px 0; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 800; font-size: 17px">{{m.name}}</span><span style="font-size: 14px; color: #4A4A4A">{{m.role}}</span></li></sc-for>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{t.creds}}" as="c" hint-placeholder-count="4"><span style="background: #0E0E0E; color: #FFFFFF; padding: 7px 12px; font-size: 14px; font-weight: 600">{{c}}</span></sc-for></div>
+</div>
+</div>
+</section>
+
+<section id="area" class="sec">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<h2 class="h2" style="font-size: 64px">{{t.areaTitle}}</h2>
+<p class="lead">{{t.areaBody}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{areas}}" as="a" hint-placeholder-count="6"><li><a href="#area" style="display: block; border: 2px solid #FFFFFF; padding: 10px 16px; text-decoration: none; font-weight: 800">{{a}}</a></li></sc-for></ul>
+<p style="margin: 0; font-size: 15px; color: #A8A8A8">{{t.areaRadius}}</p>
+</div>
+<div style="flex: 1 1 460px; min-width: 0; height: 400px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; background-color: #1A1A1A; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 40px), repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 40px); text-align: center; color: #CFCFCF; font-weight: 700">{{t.mapLabel}}</div>
+</div>
+</section>
+
+<section aria-label="Reviews" class="sec paper">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
+<h2 class="h2">{{t.revTitle}}</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px">
+<sc-for list="{{t.reviews}}" as="r" hint-placeholder-count="3">
+<figure style="margin: 0; background: #0E0E0E; color: #FFFFFF; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 18px"><blockquote style="margin: 0; font-size: 19px; line-height: 1.5; font-weight: 600">{{r.q}}</blockquote><figcaption class="d" style="font-size: 22px; color: #F07A80">{{r.who}}</figcaption></figure>
+</sc-for>
+</div>
+<a href="#top" style="font-weight: 800">{{t.revNote}} →</a>
+</div>
+</section>
+
+<section id="plans" class="sec">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px 48px; align-items: flex-end; justify-content: space-between"><h2 class="h2">{{t.plansTitle}}</h2><p class="lead" style="max-width: 440px">{{t.plansSub}}</p></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px">
+<sc-for list="{{plans}}" as="p" hint-placeholder-count="3">
+<article style="{{p.box}}">
+<sc-if value="{{p.featured}}" hint-placeholder-val="{{false}}"><span style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px">{{t.featLabel}}</span></sc-if>
+<h3 class="d" style="margin: 0; font-size: 36px">{{p.name}}</h3>
+<div class="d" style="font-size: 48px">{{p.price}}</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55">{{p.body}}</p>
+<ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.8"><sc-for list="{{p.points}}" as="pt" hint-placeholder-count="3"><li>{{pt}}</li></sc-for></ul>
+<a href="#contact" style="{{p.btn}}">{{p.cta}}</a>
+</article>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 14px; color: #A8A8A8">{{t.plansNote}}</p>
+</div>
+</section>
+
+<section aria-label="Free guide" style="background: #1A1A1A; border-top: 1px solid #2A2A2A; border-bottom: 1px solid #2A2A2A">
+<div class="wrap" style="padding-top: 56px; padding-bottom: 56px; display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; justify-content: space-between">
+<div style="display: flex; gap: 24px; align-items: center; flex: 1 1 520px; min-width: 0">
+<div class="d" style="width: 100px; height: 128px; flex-shrink: 0; background: #B0212A; display: flex; align-items: flex-end; padding: 10px; box-sizing: border-box; font-size: 15px; line-height: 1.05">{{t.magTitle}}</div>
+<div style="display: flex; flex-direction: column; gap: 8px"><h2 class="d" style="margin: 0; font-size: 36px; font-weight: 400">{{t.magTitle}}</h2><p class="lead" style="font-size: 16px">{{t.magBody}}</p><span style="font-size: 13px; color: #F07A80">{{t.magNote}}</span></div>
+</div>
+<a href="#top" class="btn">{{t.magCta}}</a>
+</div>
+</section>
+
+<section aria-label="Questions" class="sec white">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 40px">
+<h2 class="h2" style="flex: 1 1 360px; min-width: 0; font-size: 60px">{{t.faqTitle}}</h2>
+<div style="flex: 2 1 560px; min-width: 0; border-top: 3px solid #0E0E0E">
+<sc-for list="{{t.faq}}" as="f" hint-placeholder-count="5"><details style="border-bottom: 1px solid #D4D0CA"><summary>{{f.q}}</summary><p class="lead" style="padding-bottom: 22px">{{f.a}}</p></details></sc-for>
+</div>
+</div>
+</section>
+
+<section aria-label="Tips" class="sec">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<h2 class="h2" style="font-size: 60px">{{t.blogTitle}}</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px">
+<sc-for list="{{blog}}" as="b" hint-placeholder-count="3">
+<a href="#top" style="text-decoration: none; background: #1A1A1A; display: flex; flex-direction: column">
+<img src="{{b.img}}" alt="{{b.title}}" style="width: 100%; height: 200px; object-fit: cover; display: block">
+<span style="padding: 22px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; font-weight: 800; color: #F07A80; text-transform: uppercase; letter-spacing: 2px">{{b.tag}}</span><span class="d" style="font-size: 26px; line-height: 1.05">{{b.title}}</span></span>
+</a>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 14px; color: #A8A8A8">{{t.blogNote}}</p>
+</div>
+</section>
+
+<section id="contact" class="sec" style="background: #B0212A">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h2 class="h2" style="font-size: 92px; line-height: 0.92">{{t.ctaA}} <span style="color: #0E0E0E">{{t.ctaB}}</span></h2>
+<p class="lead" style="color: #FCE4E5">{{t.ctaSub}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="tel:+14047719004" class="btn" style="background: #FFFFFF; color: #B0212A">{{t.ctaCall}}</a><a href="sms:+14047719004" class="btn2">{{t.ctaText}}</a></div>
+</div>
+<form style="flex: 1 1 460px; min-width: 0; background: #0E0E0E; padding: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<label class="lab">{{t.fName}}<input type="text" class="in"></label>
+<label class="lab">{{t.fPhone}}<input type="tel" class="in"></label>
+<label class="lab">{{t.fEmail}}<input type="email" class="in"></label>
+<label class="lab">{{t.fType}}<select class="in" data-options="t.types"></select></label>
+<label class="lab" style="grid-column: 1 / -1">{{t.fMsg}}<textarea rows="4" class="in"></textarea></label>
+<button type="button" class="d" style="grid-column: 1 / -1; background: #FFFFFF; color: #0E0E0E; border: 0; padding: 18px; font-size: 24px; cursor: pointer">{{t.fSend}}</button>
+</form>
+</div>
+</section>
+
+<footer style="font-size: 15px; color: #BDBDBD">
+<div class="wrap" style="padding-top: 48px; padding-bottom: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 800; color: #FFFFFF; font-size: 17px">BUILDING IDEAS INC.</span><span>6600 Ganton Dr</span><span>Johns Creek, GA 30097</span><a href="tel:+14047719004">404-771-9004</a><a href="mailto:buildingideasremodeling@gmail.com">buildingideasremodeling@gmail.com</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="color: #FFFFFF; font-weight: 800">{{t.hoursLabel}}</span><span>{{t.hours}}</span><a href="#top">{{t.gbp}}</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="color: #FFFFFF; font-weight: 800">{{t.linksLabel}}</span><a href="#services" style="color: #BDBDBD">{{t.navServices}}</a><a href="#work" style="color: #BDBDBD">{{t.navWork}}</a><a href="#about" style="color: #BDBDBD">{{t.navAbout}}</a><a href="#area" style="color: #BDBDBD">{{t.navArea}}</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="color: #FFFFFF; font-weight: 800">{{t.credLabel}}</span><sc-for list="{{t.creds}}" as="c" hint-placeholder-count="4"><span>{{c}}</span></sc-for></div>
+</div>
+<div class="wrap" style="padding-top: 16px; padding-bottom: 28px; border-top: 1px solid #2A2A2A; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: 13px"><span>© 2026 Building Ideas Inc. · {{t.footLine}}</span><span>{{t.legal}}</span></div>
+</footer>
+
+</div>
+</script>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(p){ super(p); this.state = { lang: 'en', svc: 0 }; }
+  renderVals() {
+    const L = {
+      en: {
+        topbar: 'Planning a remodel, addition or new home in North Metro Atlanta?', callText: 'Call or text 404-771-9004',
+        navServices: 'Services', navWork: 'Our Work', navAbout: 'About', navArea: 'Service Area', navContact: 'Contact',
+        ctaCall: 'Call 404-771-9004', ctaText: 'Text Us', ctaBook: 'Book a Planning Visit',
+        heroA: 'Love the Home You Have.', heroB: 'We Handle the Build.',
+        heroSub: 'Remodels, additions and new homes across Johns Creek and North Metro Atlanta, planned on paper first so there are no surprises on site.',
+        heroCred: 'Family-owned · 15 years in business · 20+ years in construction',
+        trust: [
+          { a: 'Family-owned', b: 'Led by founder Jair Contreras' },
+          { a: '15 years', b: 'Building in North Metro Atlanta' },
+          { a: 'Plan first', b: 'Written scope and budget before work starts' },
+          { a: '[License #]', b: '[Confirm GA license and insurance]' }
+        ],
+        svcTitle: 'Whatever Your Home Needs Next, We Build It',
+        services: [
+          { title: 'Whole-Home Remodeling', body: 'Outgrown your layout or stuck with a dated house? We plan it and rebuild it room by room, so it finally fits how you live.' },
+          { title: 'Kitchens & Baths', body: 'A kitchen that doesn’t work makes every day harder. We design, build and finish kitchens and baths with clean, organized job sites.' },
+          { title: 'Additions', body: 'Need more space but love your street? We add rooms, suites and second stories that look like they were always there.' },
+          { title: 'New Home Construction', body: 'Building new can feel like a gamble. We build custom, infill and investor homes with a clear plan from day one.' },
+          { title: 'Design & Preconstruction', body: 'Surprise costs start before the first nail. We handle feasibility, budget, design and permit guidance before you commit.' },
+          { title: 'Outdoor Living', body: 'Backyard going unused? We build decks, stone fireplaces and outdoor rooms made for Georgia evenings.' }
+        ],
+        svcLink: 'More about this',
+        workTitle: 'Homes We’ve Transformed', workAll: 'See all projects',
+        aboutTitle: 'Building Is What We Do. Planning Is How We Do It.',
+        aboutBody: 'Building Ideas is a family company based in Johns Creek. Founder Jair Contreras brings more than 20 years of construction experience and still leads every project relationship.',
+        aboutStory: '[Jair’s story: why he started Building Ideas, in his own words]',
+        team: [
+          { name: 'Jair Contreras', role: 'Founder & CEO' },
+          { name: 'Deibyd Contreras', role: 'Project Manager & Operations' },
+          { name: 'Lizbeth Contreras', role: 'Administration & Finance' },
+          { name: 'Dylan Contreras', role: 'Procurement & Project Support' }
+        ],
+        creds: ['Family-owned since [year]', '20+ years in construction', '[GA license #]', '[Insurance details]'],
+        areaTitle: 'Do You Build in My Area?', areaBody: 'Yes, if you’re in North Metro Atlanta. We’re based in Johns Creek and build across these areas:',
+        areaRadius: '[Confirm service radius from Johns Creek]', mapLabel: '[Google Map embed: Building Ideas, Johns Creek, GA]',
+        revTitle: 'What Homeowners Say About Us', revNote: 'Read more reviews on Google',
+        reviews: [
+          { q: 'Building Ideas Inc. did a great job refacing our brick home with stone and building a portico.', who: 'Kim W.' },
+          { q: 'Building Ideas Inc. faced our 2 story fireplace wall with stone veneer. Very professional, with attention to detail.', who: 'Tom M.' },
+          { q: '[Pull client’s actual Google review here]', who: '[Reviewer name]' }
+        ],
+        plansTitle: 'Three Ways to Start', plansSub: 'Every project starts with a plan. Pick the step that fits where you are today.',
+        featLabel: 'Recommended first step', plansNote: '[Prices set by Building Ideas]',
+        plans: [
+          { name: 'Planning Visit', body: 'We walk your home or lot, listen, and tell you what’s possible.', points: ['On-site visit', 'An honest first look at scope', 'Next steps in writing'], cta: 'Book a Visit' },
+          { name: 'Preconstruction', body: 'Feasibility, budget, design coordination and permit guidance before you commit.', points: ['Written scope and budget', 'Design coordination', 'Permit guidance'], cta: 'Start Planning' },
+          { name: 'Full Build', body: 'We build it, manage the job and hand you the keys.', points: ['One point of contact', 'Clean, organized job site', 'Final walkthrough'], cta: 'Talk About Your Build' }
+        ],
+        magTitle: 'Free Guide: Before You Remodel', magBody: 'A one-page checklist of what to decide, budget and ask before you hire anyone. No email required.', magCta: 'Download the Checklist', magNote: '[Guide to be created]',
+        faqTitle: 'Questions Homeowners Ask Us',
+        faq: [
+          { q: 'Do you only remodel, or do you build new homes too?', a: 'We do both. Building Ideas remodels and adds on to existing homes and builds new custom, infill and investor homes across North Metro Atlanta. Call or text 404-771-9004 to talk about your project.' },
+          { q: 'Do you work in my area?', a: 'We work across North Metro Atlanta, including Johns Creek, North Fulton, Forsyth, Cherokee, Gwinnett and Cobb. Not sure if you’re in range? Call or text 404-771-9004 and we’ll tell you.' },
+          { q: 'How do I know what it will cost before you start?', a: 'You get a written scope and budget before any work begins. Our preconstruction step settles design, pricing and permits on paper first, so you’re not guessing. Book a planning visit to get started.' },
+          { q: 'Can you help with permits?', a: 'Yes. Permit guidance is part of our design and preconstruction service, so you know what your project needs before construction starts. Call or text 404-771-9004 to ask about yours.' },
+          { q: 'Who will I talk to during my project?', a: 'You’ll have one point of contact from our family team for the whole job. Founder Jair Contreras leads every project relationship. Call or text 404-771-9004 to meet us.' }
+        ],
+        blogTitle: 'Remodeling Tips That Save You Money', blogNote: '[Future blog posts]',
+        blog: [
+          { tag: 'Planning', title: 'What to Decide Before You Call a Contractor' },
+          { tag: 'Additions', title: 'Add On or Move? How North Fulton Homeowners Decide' },
+          { tag: 'Outdoor', title: 'Getting Your Deck Ready for a Georgia Summer' }
+        ],
+        ctaA: 'Enjoy Your Home.', ctaB: 'Let Us Handle the Build.', ctaSub: 'Tell us what you’re planning and we’ll set up a planning visit.',
+        fName: 'Name', fPhone: 'Phone', fEmail: 'Email', fType: 'Project type', fMsg: 'What are you planning?', fSend: 'Book a Planning Visit',
+        types: ['Remodel', 'Kitchen or bath', 'Addition', 'New home', 'Outdoor living', 'Planning only'],
+        hoursLabel: 'Hours', hours: '[Hours to confirm]', gbp: 'Google Business Profile [link]', linksLabel: 'Quick links', credLabel: 'Credentials',
+        legal: 'Privacy · Terms', footLine: 'Construction · Preconstruction · Residential Development'
+      },
+      es: {
+        topbar: '¿Planea remodelar, ampliar o construir en North Metro Atlanta?', callText: 'Llame o envíe texto al 404-771-9004',
+        navServices: 'Servicios', navWork: 'Proyectos', navAbout: 'Nosotros', navArea: 'Zona de servicio', navContact: 'Contacto',
+        ctaCall: 'Llame al 404-771-9004', ctaText: 'Envíenos un texto', ctaBook: 'Agende una visita',
+        heroA: 'Disfrute la casa que tiene.', heroB: 'Nosotros construimos.',
+        heroSub: 'Remodelaciones, ampliaciones y casas nuevas en Johns Creek y North Metro Atlanta, planeadas en papel primero para que no haya sorpresas en la obra.',
+        heroCred: 'Empresa familiar · 15 años en el negocio · 20+ años en construcción',
+        trust: [
+          { a: 'Empresa familiar', b: 'Dirigida por su fundador, Jair Contreras' },
+          { a: '15 años', b: 'Construyendo en North Metro Atlanta' },
+          { a: 'Primero el plan', b: 'Alcance y presupuesto por escrito antes de empezar' },
+          { a: '[Licencia #]', b: '[Confirmar licencia de GA y seguro]' }
+        ],
+        svcTitle: 'Lo que su casa necesite, lo construimos',
+        services: [
+          { title: 'Remodelación completa', body: '¿Su casa ya no le queda o se ve anticuada? La planeamos y renovamos cuarto por cuarto para que se ajuste a su vida.' },
+          { title: 'Cocinas y baños', body: 'Una cocina que no funciona complica cada día. Diseñamos, construimos y terminamos cocinas y baños con obras limpias y ordenadas.' },
+          { title: 'Ampliaciones', body: '¿Necesita más espacio pero ama su vecindario? Agregamos cuartos, suites y segundos pisos que parecen originales.' },
+          { title: 'Casas nuevas', body: 'Construir puede sentirse como una apuesta. Construimos casas a la medida, en lotes urbanos y de inversión con un plan claro desde el primer día.' },
+          { title: 'Diseño y preconstrucción', body: 'Los costos sorpresa empiezan antes del primer clavo. Resolvemos factibilidad, presupuesto, diseño y permisos antes de que se comprometa.' },
+          { title: 'Espacios exteriores', body: '¿No usa su patio? Construimos decks, chimeneas de piedra y espacios para las tardes de Georgia.' }
+        ],
+        svcLink: 'Más sobre este servicio',
+        workTitle: 'Casas que hemos transformado', workAll: 'Ver todos los proyectos',
+        aboutTitle: 'Construir es lo que hacemos. Planear es cómo lo hacemos.',
+        aboutBody: 'Building Ideas es una empresa familiar con base en Johns Creek. Su fundador, Jair Contreras, tiene más de 20 años de experiencia en construcción y sigue liderando la relación con cada cliente.',
+        aboutStory: '[La historia de Jair: por qué fundó Building Ideas, en sus palabras]',
+        team: [
+          { name: 'Jair Contreras', role: 'Fundador y CEO' },
+          { name: 'Deibyd Contreras', role: 'Gerente de Proyectos y Operaciones' },
+          { name: 'Lizbeth Contreras', role: 'Administración y Finanzas' },
+          { name: 'Dylan Contreras', role: 'Compras y Soporte de Proyectos' }
+        ],
+        creds: ['Empresa familiar desde [año]', '20+ años en construcción', '[Licencia de GA #]', '[Detalles del seguro]'],
+        areaTitle: '¿Construyen en mi zona?', areaBody: 'Sí, si está en North Metro Atlanta. Estamos en Johns Creek y construimos en estas zonas:',
+        areaRadius: '[Confirmar radio de servicio desde Johns Creek]', mapLabel: '[Mapa de Google: Building Ideas, Johns Creek, GA]',
+        revTitle: 'Lo que dicen los propietarios de nosotros', revNote: 'Lea más reseñas en Google',
+        reviews: [
+          { q: 'Building Ideas Inc. hizo un gran trabajo revistiendo nuestra casa de ladrillo con piedra y construyendo un pórtico.', who: 'Kim W.' },
+          { q: 'Building Ideas Inc. revistió la pared de nuestra chimenea de dos pisos con piedra. Muy profesionales y detallistas.', who: 'Tom M.' },
+          { q: '[Agregar una reseña real de Google aquí]', who: '[Nombre]' }
+        ],
+        plansTitle: 'Tres formas de empezar', plansSub: 'Cada proyecto empieza con un plan. Elija el paso que corresponde a donde está hoy.',
+        featLabel: 'Primer paso recomendado', plansNote: '[Precios definidos por Building Ideas]',
+        plans: [
+          { name: 'Visita de planeación', body: 'Recorremos su casa o terreno, escuchamos y le decimos qué es posible.', points: ['Visita en sitio', 'Una opinión honesta del alcance', 'Siguientes pasos por escrito'], cta: 'Agendar visita' },
+          { name: 'Preconstrucción', body: 'Factibilidad, presupuesto, coordinación de diseño y guía de permisos antes de comprometerse.', points: ['Alcance y presupuesto por escrito', 'Coordinación de diseño', 'Guía de permisos'], cta: 'Empezar a planear' },
+          { name: 'Obra completa', body: 'Construimos, administramos la obra y le entregamos las llaves.', points: ['Un solo contacto', 'Obra limpia y organizada', 'Recorrido final'], cta: 'Hablar de su obra' }
+        ],
+        magTitle: 'Guía gratis: Antes de remodelar', magBody: 'Una lista de una página con lo que debe decidir, presupuestar y preguntar antes de contratar. Sin pedir su correo.', magCta: 'Descargar la lista', magNote: '[Guía por crear]',
+        faqTitle: 'Preguntas que nos hacen los propietarios',
+        faq: [
+          { q: '¿Solo remodelan o también construyen casas nuevas?', a: 'Hacemos las dos cosas. Building Ideas remodela y amplía casas existentes y construye casas nuevas a la medida, en lotes urbanos y de inversión en North Metro Atlanta. Llame o envíe texto al 404-771-9004.' },
+          { q: '¿Trabajan en mi zona?', a: 'Trabajamos en North Metro Atlanta, incluyendo Johns Creek, North Fulton, Forsyth, Cherokee, Gwinnett y Cobb. ¿No está seguro? Llame o envíe texto al 404-771-9004 y le decimos.' },
+          { q: '¿Cómo sé cuánto costará antes de empezar?', a: 'Recibe un alcance y presupuesto por escrito antes de empezar. Nuestra preconstrucción resuelve diseño, precios y permisos en papel primero. Agende una visita de planeación para empezar.' },
+          { q: '¿Pueden ayudarme con los permisos?', a: 'Sí. La guía de permisos es parte de nuestro servicio de diseño y preconstrucción, para que sepa qué necesita antes de construir. Llame o envíe texto al 404-771-9004.' },
+          { q: '¿Con quién hablaré durante mi proyecto?', a: 'Tendrá un solo contacto de nuestro equipo familiar durante toda la obra. Nuestro fundador, Jair Contreras, lidera la relación con cada cliente. Llame o envíe texto al 404-771-9004.' }
+        ],
+        blogTitle: 'Consejos de remodelación que le ahorran dinero', blogNote: '[Artículos futuros]',
+        blog: [
+          { tag: 'Planeación', title: 'Qué decidir antes de llamar a un contratista' },
+          { tag: 'Ampliaciones', title: '¿Ampliar o mudarse? Cómo deciden en North Fulton' },
+          { tag: 'Exteriores', title: 'Prepare su deck para el verano de Georgia' }
+        ],
+        ctaA: 'Disfrute su casa.', ctaB: 'Nosotros nos encargamos de la obra.', ctaSub: 'Cuéntenos qué planea y agendamos una visita de planeación.',
+        fName: 'Nombre', fPhone: 'Teléfono', fEmail: 'Correo', fType: 'Tipo de proyecto', fMsg: '¿Qué está planeando?', fSend: 'Agendar visita de planeación',
+        types: ['Remodelación', 'Cocina o baño', 'Ampliación', 'Casa nueva', 'Exteriores', 'Solo planeación'],
+        hoursLabel: 'Horario', hours: '[Horario por confirmar]', gbp: 'Perfil de Google Business [enlace]', linksLabel: 'Enlaces', credLabel: 'Credenciales',
+        legal: 'Privacidad · Términos', footLine: 'Construcción · Preconstrucción · Desarrollo Residencial'
+      }
+    };
+    const es = this.state.lang === 'es';
+    const t = L[this.state.lang];
+    const B = 'images/';
+    const svcImg = ['images/church-st-exterior.jpg', 'images/church-st-kitchen.jpg', 'images/aerial-addition.jpg', 'images/two-story-home.jpg', 'images/interior-framing.jpg', 'images/outdoor-fireplace.jpg'];
+    const on = 'background:#FFFFFF;color:#B0212A;border:0;padding:0 14px;min-height:36px;min-width:44px;font-weight:800;font-size:13px;cursor:pointer';
+    const off = 'background:transparent;color:#FFFFFF;border:0;padding:0 14px;min-height:36px;min-width:44px;font-weight:700;font-size:13px;cursor:pointer';
+    const rowOn = 'width:100%;display:flex;gap:16px;align-items:flex-start;padding:20px 18px;background:#B0212A;color:#FFFFFF;border:0;cursor:pointer;font:inherit';
+    const rowOff = 'width:100%;display:flex;gap:16px;align-items:flex-start;padding:20px 18px;background:transparent;color:#0E0E0E;border:0;cursor:pointer;font:inherit';
+    const boxOn = 'background:#B0212A;color:#FFFFFF;padding:32px;display:flex;flex-direction:column;gap:12px';
+    const boxOff = 'background:#1A1A1A;color:#FFFFFF;padding:32px;display:flex;flex-direction:column;gap:12px';
+    const btnOn = 'margin-top:auto;text-align:center;background:#FFFFFF;color:#B0212A;text-decoration:none;font-weight:800;padding:16px 22px';
+    const btnOff = 'margin-top:auto;text-align:center;background:#B0212A;color:#FFFFFF;text-decoration:none;font-weight:800;padding:16px 22px';
+    const v = this.state.svc;
+    return {
+      t,
+      isEn: !es, isEs: es,
+      enBtn: es ? off : on, esBtn: es ? on : off,
+      setEn: () => this.setState({ lang: 'en' }),
+      setEs: () => this.setState({ lang: 'es' }),
+      areas: ['Johns Creek', 'North Fulton', 'Forsyth', 'Cherokee', 'Gwinnett', 'Cobb'],
+      svcRows: t.services.map((s, i) => ({ ...s, n: '0' + (i + 1), active: i === v, style: i === v ? rowOn : rowOff, pick: () => this.setState({ svc: i }) })),
+      svc: { ...t.services[v], img: svcImg[v] },
+      plans: t.plans.map((p, i) => ({ ...p, price: '$—', featured: i === 1, box: i === 1 ? boxOn : boxOff, btn: i === 1 ? btnOn : btnOff })),
+      blog: t.blog.map((b, i) => ({ ...b, img: ['images/interior-framing.jpg', 'images/aerial-addition.jpg', 'images/church-st-deck.jpg'][i] })),
+      work: [
+        { name: 'Church St.', tag: es ? 'Renovación completa' : 'Whole-home', img: 'images/church-st-exterior.jpg' },
+        { name: es ? 'Chimenea exterior' : 'Outdoor fireplace', tag: es ? 'Piedra y deck' : 'Stone & deck', img: 'images/outdoor-fireplace.jpg' },
+        { name: "Steve's Addition", tag: es ? 'Baño principal' : 'Primary bath', img: 'images/steve-bath-vanity.jpg' },
+        { name: es ? 'Cocina Church St.' : 'Church St. Kitchen', tag: es ? 'Cocina' : 'Kitchen', img: 'images/church-st-kitchen.jpg' },
+        { name: 'Mudroom', tag: es ? 'A la medida' : 'Built-ins', img: 'images/mudroom.jpg' },
+        { name: es ? 'Escalera' : 'Staircase', tag: es ? 'Remodelación' : 'Remodel', img: 'images/staircase.jpg' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
