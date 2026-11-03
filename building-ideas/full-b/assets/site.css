@@ -3,7 +3,7 @@
   --ink:#191D1C; --ink2:#232928; --ink3:#111413;
   --line:#343B3A; --line2:#4A5251;
   --paper:#EEF0EF; --paper-line:#C3C9C7; --white:#FFFFFF;
-  --red:#A3222A; --red-dk:#821A21; --rose:#F0A3A7; --red-ink:#8E1D24; --red-tint:#FBE3E4;
+  --red:#7A2440; --red-dk:#5E1A31; --rose:#E3A9BD; --red-ink:#7A2440; --red-tint:#F4DFE7;
   --fg:#EEF0EF; --mute:#BCC3C1; --mute2:#A9B1AF; --body-dk:#3D4544; --fg-dk:#191D1C;
   --font:'Archivo',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
   color-scheme:dark;
@@ -38,8 +38,8 @@ h1,h2,h3{text-wrap:balance}
 .light .small{color:var(--body-dk)}
 .kick{font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-stretch:125%;color:var(--rose)}
 .light .kick{color:var(--red-ink)}
-.ph{background:rgba(240,163,167,.12);color:var(--rose);padding:0 4px;font-style:normal}
-.light .ph{background:rgba(142,29,36,.08);color:var(--red-ink)}
+.ph{background:rgba(227,169,189,.12);color:var(--rose);padding:0 4px;font-style:normal}
+.light .ph{background:rgba(122,36,64,.08);color:var(--red-ink)}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:var(--white)!important;text-decoration:none;font-weight:700;padding:15px 24px;border-radius:2px;font-size:16px;border:0;cursor:pointer;font-family:inherit;min-height:48px}
