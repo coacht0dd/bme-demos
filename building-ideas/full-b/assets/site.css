@@ -96,8 +96,8 @@ h1,h2,h3{text-wrap:balance}
 .trust div{padding:24px 20px 24px 0;display:flex;flex-direction:column;gap:4px}
 .trust b{font-weight:900;font-size:19px;text-transform:uppercase;color:var(--rose);font-stretch:125%}
 .trust span{font-size:15px;color:var(--mute)}
-.ticker{background:var(--ink2);overflow:hidden;white-space:nowrap}
-.ticker .wrap{padding-block:14px;display:flex;gap:32px;font-weight:800;font-size:15px;text-transform:uppercase;font-stretch:125%}
+.ticker{background:var(--ink2)}
+.ticker .wrap{padding-block:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-weight:800;font-size:15px;text-transform:uppercase;font-stretch:125%}
 .ticker a{color:var(--fg);text-decoration:none}.ticker a:hover{color:var(--rose)}
 
 /* Grids & cards */
@@ -274,3 +274,4 @@ h1,h2,h3{overflow-wrap:break-word}
 @media (max-width:520px){.band .book{display:none}.band h2{font-size:22px}.block .h2{font-size:22px!important}}
 @media (max-width:520px){.h1,.h1p,.h2,.band h2,.path b{font-stretch:108%}}
 @media (max-width:520px){.h1p{font-size:clamp(23px,6.6vw,58px)}.plan .h3{font-size:18px}}
+@media (max-width:700px){.ticker .wrap{justify-content:flex-start;gap:8px 20px;font-size:14px}}
