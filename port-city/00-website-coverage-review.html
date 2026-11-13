@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Port City Coverage Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#2a2965;--navy-d:#1d1c4a;--silver:#bebdc2;--paper:#fbfaf7;--ink:#1f1e2e;--muted:#5b5a6b;--line:#dcdbe2;--pass:#1e6b45;--pass-bg:#e5f3ec;--fair:#8a5a00;--fair-bg:#fbf1dc;--fail:#a3262e;--fail-bg:#fbe7e8;--tbc:#4a4a5a;--tbc-bg:#ececf1}
+*{box-sizing:border-box}
+body{margin:0;background:#ecebef;color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+.sheet{max-width:980px;margin:32px auto;background:var(--paper);box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(42,41,101,.08)}
+header.dec{background:var(--navy);color:#fff;padding:28px 40px 24px;border-bottom:6px solid var(--silver)}
+.dec .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.dec small{font:600 11px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--silver)}
+.dec h1{font:700 34px/1.15 "IBM Plex Serif",serif;margin:8px 0 0}
+.dec .meta{display:grid;grid-template-columns:repeat(4,auto);gap:4px 28px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(190,189,194,.35)}
+.dec .meta div{font:400 13px/1.4 "IBM Plex Mono",monospace;color:#e6e5ee}
+.dec .meta b{display:block;font-weight:600;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--silver);margin-bottom:3px}
+main{padding:8px 40px 40px}
+h2{font:700 22px/1.25 "IBM Plex Serif",serif;color:var(--navy);margin:40px 0 6px;display:flex;gap:12px;align-items:baseline}
+h2 .n{font:600 12px/1 "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.1em}
+.lede{color:var(--muted);margin:0 0 18px}
+.summary{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;margin-top:32px;padding:24px;border:1px solid var(--line);background:#fff}
+.grade-big{width:150px;height:150px;border:3px solid var(--navy);display:grid;place-items:center;text-align:center}
+.grade-big strong{font:700 64px/1 "IBM Plex Serif",serif;color:var(--navy);display:block}
+.grade-big span{font:600 10.5px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;color:var(--muted)}
+.summary p{margin:0 0 10px}
+.tally{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.tag{font:600 11px/1 "IBM Plex Mono",monospace;letter-spacing:.08em;padding:6px 8px;border-radius:2px;white-space:nowrap}
+.tag.pass{background:var(--pass-bg);color:var(--pass)}.tag.fair{background:var(--fair-bg);color:var(--fair)}.tag.fail{background:var(--fail-bg);color:var(--fail)}.tag.tbc{background:var(--tbc-bg);color:var(--tbc)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+th,td{text-align:left;vertical-align:top;padding:14px 14px;border-bottom:1px solid var(--line)}
+thead th{font:600 10.5px/1.2 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:#f5f4f8}
+td.no{font:600 12px/1.6 "IBM Plex Mono",monospace;color:var(--muted);width:36px}
+td.cat{width:190px;font-weight:600;color:var(--navy)}
+td.gr{width:96px;text-align:center}
+.letter{font:700 22px/1 "IBM Plex Serif",serif;display:block;margin-bottom:6px}
+.letter.pass{color:var(--pass)}.letter.fair{color:var(--fair)}.letter.fail{color:var(--fail)}
+td.find b{display:block;margin-bottom:3px}
+td.find p{margin:0;color:var(--muted);font-size:14.5px}
+.ev{font:400 12px/1.5 "IBM Plex Mono",monospace;color:#6d6c7d;margin-top:6px;word-break:break-word}
+.pass-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;padding:20px 24px;background:var(--pass-bg);border-left:4px solid var(--pass)}
+.pass-list div{display:flex;gap:10px;font-size:15px}
+.pass-list svg{flex:none;margin-top:3px}
+.matrix td,.matrix th{text-align:center}
+.matrix td:first-child,.matrix th:first-child{text-align:left}
+.matrix tr.you td{background:#efeef8;font-weight:600}
+.y{color:var(--pass);font-weight:700}.n{color:var(--fail);font-weight:700}.p{color:var(--fair);font-weight:700}
+.matrix small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.opening{margin-top:18px;padding:22px 24px;background:var(--navy);color:#fff;border-left:6px solid var(--silver)}
+.opening small{font:600 11px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--silver)}
+.opening p{margin:8px 0 0;font-size:17px}
+.plan{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:#fff}
+.plan > div{padding:22px 24px}
+.plan > div + div{border-left:1px solid var(--line);background:#f7f7fb}
+.plan h3{font:600 11px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px;color:var(--muted)}
+.plan ol,.plan ul{margin:0;padding-left:20px}
+.plan li{margin:0 0 8px}
+.plan ul li::marker{color:var(--fail)}
+.hook{margin-top:16px;font:700 19px/1.35 "IBM Plex Serif",serif;color:var(--navy)}
+.concepts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.concepts a{display:block;padding:16px;border:1px solid var(--line);background:#fff;text-decoration:none;color:var(--ink)}
+.concepts a:hover,.concepts a:focus-visible{border-color:var(--navy);outline:none;box-shadow:0 0 0 2px var(--navy)}
+.concepts b{display:block;color:var(--navy);margin-bottom:4px}
+.concepts span{font-size:14px;color:var(--muted)}
+.concepts i{font:600 11px/1 "IBM Plex Mono",monospace;font-style:normal;color:var(--muted);letter-spacing:.1em}
+footer{padding:20px 40px 28px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer p{margin:0 0 6px}
+@media (max-width:760px){
+ .sheet{margin:0}
+ header.dec,main,footer{padding-left:16px;padding-right:16px}
+ .dec h1{font-size:26px}
+ .dec .meta{grid-template-columns:1fr 1fr}
+ .summary{grid-template-columns:1fr}
+ .pass-list,.plan,.concepts{grid-template-columns:1fr}
+ .plan > div + div{border-left:0;border-top:1px solid var(--line)}
+ table.grades thead{display:none}
+ table.grades tr{display:grid;grid-template-columns:36px 1fr 80px;border-bottom:1px solid var(--line)}
+ table.grades td{border:0;padding:12px 8px}
+ table.grades td.cat{width:auto}
+ table.grades td.find{grid-column:1 / -1;padding-top:0}
+ .matrix{font-size:13px}
+ .matrix th,.matrix td{padding:10px 6px}
+ .mx-wrap{overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+<header class="dec">
+  <small>Website Coverage Review · Declarations</small>
+  <h1>Port City Insurance Group, Inc.</h1>
+  <div class="meta">
+    <div><b>Insured</b>Geri Collins, Agent</div>
+    <div><b>Property</b>portcityinsurancegroup.com</div>
+    <div><b>Review date</b>Oct 17, 2026</div>
+    <div><b>Prepared by</b>Business Masters Enterprises</div>
+  </div>
+</header>
+
+<main>
+<section class="summary" aria-label="Overall result">
+  <div class="grade-big"><div><strong>C</strong><span>OVERALL</span></div></div>
+  <div>
+    <p><b>The site is open for business, but it has coverage gaps where it counts most.</b> It has a solid base of pages and a clear group-benefits focus. But Google and AI assistants get mixed signals, the site shows no reviews, and Geri herself is almost invisible.</p>
+    <p>Like a policy with a high deductible: it works, until someone actually needs it to.</p>
+    <div class="tally"><span class="tag pass">2 COVERED</span><span class="tag fair">5 PARTIAL</span><span class="tag fail">3 GAP</span><span class="tag tbc">3 TO CONFIRM</span></div>
+  </div>
+</section>
+
+<h2><span class="n">01</span>Coverage Schedule</h2>
+<p class="lede">Ten checks, graded the way you'd review a client's policy. Every finding below was checked on the live site on Oct 17, 2026.</p>
+
+<table class="grades">
+<thead><tr><th>#</th><th>Coverage</th><th>Grade</th><th>Finding</th></tr></thead>
+<tbody>
+<tr><td class="no">01</td><td class="cat">Platform &amp; mobile speed</td><td class="gr"><span class="letter fair">C</span><span class="tag fair">PARTIAL</span></td>
+<td class="find"><b>"You're renting your website, and it advertises the landlord."</b><p>The site runs on BrightFire, a rented WordPress platform for agents. The footer carries a BrightFire logo and ad link on every page. You don't own the design, and you can't easily move it.</p><div class="ev">Mobile speed score: <span class="tag tbc">TO CONFIRM</span> (Google's test tool hit its daily limit; we'll rerun before the meeting)</div></td></tr>
+
+<tr><td class="no">02</td><td class="cat">Schema (Google's data tags)</td><td class="gr"><span class="letter fair">B</span><span class="tag fair">PARTIAL</span></td>
+<td class="find"><b>"Google knows your address, but not when you're open or who you serve."</b><p>There's a basic InsuranceAgency tag with your address, phone, and map pin. Good start. But no hours, no service area, and no Service or FAQ tags, so Google has to guess the rest.</p></td></tr>
+
+<tr><td class="no">03</td><td class="cat">City / location pages</td><td class="gr"><span class="letter fail">D</span><span class="tag fail">GAP</span></td>
+<td class="find"><b>"You say 'all of Georgia,' but Google only sees Duluth."</b><p>There is exactly one location page. It has about 150 words of its own, no map, no reviews, and no FAQ. No pages for Lawrenceville, Suwanee, Johns Creek, Norcross, or any other town an employer might search from.</p><div class="ev">/locations/duluth-georgia/ is the only location URL in the sitemap</div></td></tr>
+
+<tr><td class="no">04</td><td class="cat">Service pages</td><td class="gr"><span class="letter fair">C</span><span class="tag fair">PARTIAL</span></td>
+<td class="find"><b>"Your #1 specialty is competing with itself."</b><p>Group benefits, the thing you're known for, lives on two separate sets of pages with the same title. Each tells Google it's the real one, so they split your ranking power. The site also has 70+ template pages, including kidnap &amp; ransom, vineyard &amp; winery, and farm insurance. Are those lines you actually write?</p><div class="ev">/insurance-services/group-benefits/ and /group-benefits-2/ both titled "Duluth Group Benefits | Insuring Georgia," each with its own canonical</div></td></tr>
+
+<tr><td class="no">05</td><td class="cat">Headline &amp; page title</td><td class="gr"><span class="letter fair">C</span><span class="tag fair">PARTIAL</span></td>
+<td class="find"><b>"Your headline and your title tag each tell half the story."</b><p>The headline says "specializes in group employee benefits" but no city. The page title says "Insuring Duluth &amp; Georgia" but no service. Google ranks the page best when both appear together, like "Group Employee Benefits in Duluth, GA."</p></td></tr>
+
+<tr><td class="no">06</td><td class="cat">Reviews on the site</td><td class="gr"><span class="letter fail">F</span><span class="tag fail">GAP</span></td>
+<td class="find"><b>"Customers can't see one word from a happy client."</b><p>The homepage has a "Leave a Review" button but shows zero reviews. Employers and families picking an agent want proof first. Right now, they leave the site to find it, and might not come back.</p><div class="ev">Google review count &amp; rating: <span class="tag tbc">TO CONFIRM</span> from the Google Business Profile</div></td></tr>
+
+<tr><td class="no">07</td><td class="cat">FAQ / AI-answer readiness</td><td class="gr"><span class="letter fair">C</span><span class="tag fair">PARTIAL</span></td>
+<td class="find"><b>"When someone asks ChatGPT for a benefits agent in Duluth, your site gives it nothing to quote."</b><p>There is a FAQ page, but it's buried under Support &gt; Insurance Resources, has no FAQ tags, and isn't on the pages people actually land on. The blog has 40 articles, but they appear to come from the website vendor's content feed, and some repeat (two Medigap posts, two Part D posts).</p></td></tr>
+
+<tr><td class="no">08</td><td class="cat">Easy contact path</td><td class="gr"><span class="letter pass">B</span><span class="tag pass">COVERED</span></td>
+<td class="find"><b>"People can reach you, but the buttons don't give them a reason to."</b><p>Click-to-call, a quote form on the homepage, and self-service for billing, claims, certificates, and policy changes. That's real value. The calls to action ("talk to us today") are generic, and there's no way to book a time.</p></td></tr>
+
+<tr><td class="no">09</td><td class="cat">Trust &amp; credentials</td><td class="gr"><span class="letter fail">D</span><span class="tag fail">GAP</span></td>
+<td class="find"><b>"Your 'Meet Geri' page is a headshot and a phone number."</b><p>No story, no years licensed, no licenses listed, no "why I do this." For an agency where people buy from a person, the person is missing. The Gwinnett Chamber membership and carrier list help, but they're easy to miss.</p></td></tr>
+
+<tr><td class="no">10</td><td class="cat">Sitemap &amp; indexing</td><td class="gr"><span class="letter pass">B</span><span class="tag pass">COVERED</span></td>
+<td class="find"><b>"Google can find everything, including a test page."</b><p>The sitemaps and robots file are set up. But a page called "Media – Test – Post" is live and listed in your sitemap for Google to index. Small fix, bad first impression.</p><div class="ev">/media-test-post/ returns 200 and is in post-sitemap.xml · Search Console access: <span class="tag tbc">TO CONFIRM</span></div></td></tr>
+</tbody>
+</table>
+
+<h2><span class="n">02</span>What's Already Working</h2>
+<p class="lede">Fair is fair. These are real strengths, and the new site keeps every one.</p>
+<div class="pass-list">
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>A clear specialty: group employee benefits</div>
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Independent agency with a strong line: "We work for you"</div>
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Rare mix: business, benefits, life, health, and Medicare</div>
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Address, phone, and map pin tagged for Google</div>
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Self-service for bills, claims, and certificates</div>
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Required Medicare disclaimer is in place</div>
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Gwinnett County Chamber member</div>
+  <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e6b45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Quote form right on the homepage</div>
+</div>
+
+<h2><span class="n">03</span>How You Compare Locally</h2>
+<p class="lede">Three nearby agencies that show up for benefits and Medicare searches, checked from their homepage or Duluth page in October 2026.</p>
+<div class="mx-wrap">
+<table class="matrix">
+<thead><tr><th>Agency</th><th>City pages</th><th>Reviews on site</th><th>Online quote</th><th>FAQ on site</th><th>Benefits + Medicare</th></tr></thead>
+<tbody>
+<tr><td>The Liberty Company<small>Duluth office</small></td><td class="y">Yes</td><td class="n">No</td><td class="y">Yes</td><td class="n">No</td><td class="n">Benefits only</td></tr>
+<tr><td>Concierge Insurance Group<small>Duluth</small></td><td class="n">No</td><td class="n">No</td><td class="y">Yes</td><td class="n">No</td><td class="n">Neither</td></tr>
+<tr><td>Brand &amp; Britt<small>Grayson + 4 towns</small></td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Both</td></tr>
+<tr class="you"><td>Port City Insurance Group<small>Duluth</small></td><td class="p">1 page</td><td class="n">No</td><td class="y">Yes</td><td class="p">Buried</td><td class="y">Both</td></tr>
+</tbody>
+</table>
+</div>
+<div class="opening">
+  <small>THE OPENING</small>
+  <p>In Duluth itself, no agency pairs <b>group benefits and Medicare</b> with <b>reviews on the site</b> and <b>answers AI can quote</b>. Brand &amp; Britt does it, but from Grayson. The business owner who also needs help with Mom's Medicare, searching from Duluth or Johns Creek, has no clear local choice. That spot is open.</p>
+</div>
+
+<h2><span class="n">04</span>The Plan</h2>
+<div class="plan">
+  <div>
+    <h3>Today's site</h3>
+    <ul>
+      <li>Rented platform with a vendor ad in the footer</li>
+      <li>Two competing group-benefits sections</li>
+      <li>One thin city page for "all of Georgia"</li>
+      <li>Zero reviews shown</li>
+      <li>Geri is a name and a phone number</li>
+      <li>FAQ hidden, no AI-ready answers</li>
+      <li>A test page live on Google</li>
+    </ul>
+  </div>
+  <div>
+    <h3>What we build (by traffic impact)</h3>
+    <ol>
+      <li>One strong group-benefits hub, duplicates merged and redirected</li>
+      <li>City pages for Duluth and the Gwinnett towns you serve</li>
+      <li>Headline + title that say service and city together</li>
+      <li>Real Google reviews shown on every key page</li>
+      <li>FAQ answers on each service and city page, tagged for Google and AI</li>
+      <li>A real "Meet Geri" story with photo and credentials</li>
+      <li>Full Google tags: hours, service area, services, FAQ</li>
+      <li>Clean-up: test page removed, off-niche pages trimmed</li>
+    </ol>
+    <p class="hook">Your domain. Your website. Your content. Update it yourself: just tell the AI what to change.</p>
+  </div>
+</div>
+
+<h2><span class="n">05</span>Six Homepage Concepts</h2>
+<p class="lede">Six different directions, all on your navy and silver. Pick one, or mix the parts you like. Reviews and Geri's story are placeholders until you send the real ones.</p>
+<nav class="concepts" aria-label="Mockup concepts">
+  <a href="01-benefits-pro.html"><i>CONCEPT 1</i><b>Benefits Pro</b><span>Built for employers. Leads with group benefits.</span></a>
+  <a href="02-medicare-made-simple.html"><i>CONCEPT 2</i><b>Medicare Made Simple</b><span>Big, calm text for people turning 65.</span></a>
+  <a href="03-geri-first.html"><i>CONCEPT 3</i><b>Geri First</b><span>Your face and your story, front and center.</span></a>
+  <a href="04-one-stop-agency.html"><i>CONCEPT 4</i><b>One-Stop Agency</b><span>Five big tiles. One agency for everything.</span></a>
+  <a href="05-georgia-coverage.html"><i>CONCEPT 5</i><b>Georgia Coverage</b><span>Town-by-town pages built to rank.</span></a>
+  <a href="06-quote-fast.html"><i>CONCEPT 6</i><b>Quote Fast</b><span>A 3-step quote quiz right at the top.</span></a>
+</nav>
+</main>
+
+<footer>
+  <p><b>How we checked:</b> live page fetches, page code, sitemaps, and Google data tags, Oct 17, 2026. Items marked "to confirm" will be verified before we meet. We never guess at numbers.</p>
+  <p>Prepared by Business Masters Enterprises for Port City Insurance Group, Inc. Competitor names are listed for comparison only.</p>
+</footer>
+</div>
+</body>
+</html>
